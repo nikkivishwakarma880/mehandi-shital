@@ -14,7 +14,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#1F3D2B] text-[#FFF8E7]">
+    /* Light Background: Left to Right (White -> Soft Cream -> Warm Light Gold) */
+    <footer className="bg-gradient-to-r from-[#f7f3f3] via-[#FAF6ED] to-[#F5EFE0] text-[#1F3D2B] border-t border-[#1F3D2B]/10">
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -22,14 +23,14 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <div>
-              <h2 className="text-[#D4AF37] text-2xl font-bold tracking-wider">
-                Mehndi Grace
-              </h2>
-              <p className="text-[#D4AF37] text-sm tracking-widest opacity-80">
+              <h3 className="text-[#1F3D2B] text-xl font-serif font-bold tracking-wider">
+                Shital Artist
+              </h3>
+              <p className="text-[#B38F24] text-xs tracking-widest font-semibold uppercase">
                 Bridal & Artistry
               </p>
             </div>
-            <p className="text-[#FFF8E7] text-sm leading-relaxed opacity-90">
+            <p className="text-[#1F3D2B]/80 text-xs leading-relaxed">
               Creating timeless mehndi designs that tell your unique love story. 
               Where tradition meets artistry, making every celebration extraordinary.
             </p>
@@ -37,7 +38,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-[#D4AF37] text-lg font-semibold mb-4 tracking-wide">
+            <h3 className="text-[#B38F24] text-sm font-bold mb-4 tracking-wide font-serif">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -45,7 +46,7 @@ const Footer = () => {
                 <li key={link}>
                   <a 
                     href="#" 
-                    className="text-[#FFF8E7] text-sm hover:text-[#D4AF37] transition-colors duration-300 opacity-90 hover:opacity-100"
+                    className="text-[#1F3D2B]/85 text-xs hover:text-[#B38F24] transition-colors duration-300 font-medium"
                   >
                     {link}
                   </a>
@@ -56,7 +57,7 @@ const Footer = () => {
 
           {/* Our Services */}
           <div>
-            <h3 className="text-[#D4AF37] text-lg font-semibold mb-4 tracking-wide">
+            <h3 className="text-[#B38F24] text-sm font-bold mb-4 tracking-wide font-serif">
               Our Services
             </h3>
             <ul className="space-y-2">
@@ -64,7 +65,7 @@ const Footer = () => {
                 <li key={service}>
                   <a 
                     href="#" 
-                    className="text-[#FFF8E7] text-sm hover:text-[#D4AF37] transition-colors duration-300 opacity-90 hover:opacity-100"
+                    className="text-[#1F3D2B]/85 text-xs hover:text-[#B38F24] transition-colors duration-300 font-medium"
                   >
                     {service}
                   </a>
@@ -75,66 +76,51 @@ const Footer = () => {
 
           {/* Contact Us */}
           <div>
-            <h3 className="text-[#D4AF37] text-lg font-semibold mb-4 tracking-wide">
+            <h3 className="text-[#B38F24] text-sm font-bold mb-4 tracking-wide font-serif">
               Contact Us
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-[#D4AF37] mt-0.5 flex-shrink-0" />
-                <span className="text-[#FFF8E7] text-sm opacity-90">
-                  Kanpur, Uttar Pradesh, India
+              <li className="flex items-start gap-2.5">
+                <MapPin size={18} className="text-[#B38F24] mt-0.5 flex-shrink-0" />
+                <span className="text-[#1F3D2B]/85 text-xs font-medium">
+                  Gorakhpur, Uttar Pradesh, India
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone size={18} className="text-[#D4AF37] flex-shrink-0" />
-                <span className="text-[#FFF8E7] text-sm opacity-90">
-                  +91 XXXXX XXXXX
+              <li className="flex items-center gap-2.5">
+                <Phone size={18} className="text-[#B38F24] flex-shrink-0" />
+                <span className="text-[#1F3D2B]/85 text-xs font-medium">
+                  +91 6393430756
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail size={18} className="text-[#D4AF37] flex-shrink-0" />
-                <span className="text-[#FFF8E7] text-sm opacity-90">
-                  hello@mehndigrace.com
+              <li className="flex items-center gap-2.5">
+                <Mail size={18} className="text-[#B38F24] flex-shrink-0" />
+                <span className="text-[#1F3D2B]/85 text-xs font-medium">
+                  shital@mehndigrace.com
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Clock size={18} className="text-[#D4AF37] flex-shrink-0" />
-                <span className="text-[#FFF8E7] text-sm opacity-90">
+              <li className="flex items-center gap-2.5">
+                <Clock size={18} className="text-[#B38F24] flex-shrink-0" />
+                <span className="text-[#1F3D2B]/85 text-xs font-medium">
                   Mon – Sun: 10:00 AM – 8:00 PM
                 </span>
               </li>
             </ul>
           </div>
         </div>
-
-        {/* Book Appointment CTA Section */}
-        <div className="mt-12 pt-8 border-t border-[#D4AF37]/20">
-          <div className="bg-[#D4AF37]/10 rounded-2xl p-6 md:p-8 text-center">
-            <h3 className="text-[#D4AF37] text-xl md:text-2xl font-bold mb-2">
-              Ready for Your Special Day?
-            </h3>
-            <p className="text-[#FFF8E7] text-sm md:text-base max-w-2xl mx-auto mb-4 opacity-90">
-              Let our beautiful mehndi designs make your celebration even more memorable.
-            </p>
-            <button className="bg-[#D4AF37] text-[#1F3D2B] px-8 py-3 rounded-full font-semibold hover:bg-[#c5a032] transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Book Your Appointment
-            </button>
-          </div>
-        </div>
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-[#C9A227] bg-[#1F3D2B]/95">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="border-t border-[#1F3D2B]/15 bg-[#1F3D2B]/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-[#FFF8E7] text-sm opacity-80">
-              © 2026 Mehndi Grace. All Rights Reserved.
+            <p className="text-[#1F3D2B]/80 text-xs font-medium">
+              © 2026 Shital Artist. All Rights Reserved.
             </p>
-            <div className="flex items-center gap-3 text-[#FFF8E7] text-sm opacity-80">
+            <div className="flex items-center gap-2 text-[#1F3D2B]/80 text-xs font-medium">
               <span>Bridal Mehndi</span>
-              <span className="text-[#D4AF37]">•</span>
+              <span className="text-[#B38F24]">•</span>
               <span>Traditional Art</span>
-              <span className="text-[#D4AF37]">•</span>
+              <span className="text-[#B38F24]">•</span>
               <span>Beautiful Memories</span>
             </div>
           </div>

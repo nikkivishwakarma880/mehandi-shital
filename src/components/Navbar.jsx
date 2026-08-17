@@ -7,39 +7,50 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    {name:'Home', path:'/'},
-    {name:'About', path:'/about'},
-    {name:'Services', path:'/services'},
-    {name:'Bridal Mehndi', path:'/bridal-mehndi'},
-    {name:'Gallery', path:'/gallery'},
-    {name:'Contact', path:'/contact'},
-
-    ];
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Bridal Mehndi', path: '/bridal-mehndi' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Contact', path: '/contact' },
+  ];
 
   return (
-    <nav className="bg-[#1F3D2B] px-4 sm:px-6 lg:px-8 py-4 shadow-lg sticky top-0 z-50">
+    /* Soft/Light Gradient Left-to-Right: Clean and Subtle Theme */
+    <nav className="bg-gradient-to-r from-[#faf8f3] via-[#f8f1e1] to-[#f5e7cf] px-3 sm:px-5 lg:px-5 py-2.5 shadow-sm border-b border-[#1F3D2B]/10 sticky top-0 z-50 backdrop-blur-md">
       <div className="container mx-auto flex justify-between items-center">
+        
         {/* Logo */}
-        <Link to='/' className="flex items-center space-x-2">
-          <span className="text-2xl">🌿</span>
+        <Link to="/" className="flex items-center space-x-2">
+          <img
+            src="/shital-logo.png"
+            alt="Shital Artist Logo"
+            className="w-11 h-11 object-contain"
+          />
           <div>
-            <h1 className="text-[#D4AF37] text-2xl font-bold tracking-wider">
-              Mehndi Grace
+            <h1 className="text-[#142b1d] text-[16px] font-bold tracking-wider font-serif">
+              Shital Artist
             </h1>
-            <p className="text-[#FFF8E7] text-xs tracking-widest opacity-80">
+            <p className="text-[#B38F24] text-[9px] tracking-widest font-semibold uppercase">
               Bridal & Artistry
             </p>
           </div>
         </Link>
-
+                   
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-6">
             {navLinks.map((link) => (
-              <li key={link}>
+              <li key={link.path}>
                 <NavLink
-                to={link.path}
-                  className={`text-[#FFF8E7] hover:text-[#D4AF37] transition-colors duration-300 font-medium text-sm tracking-wide`}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `text-xs tracking-wide font-semibold transition-all duration-300 pb-1 border-b-2 ${
+                      isActive
+                        ? 'text-[#1F3D2B] border-[#B38F24]'
+                        : 'text-[#1F3D2B]/75 border-transparent hover:text-[#1F3D2B] hover:border-[#B38F24]'
+                    }`
+                  }
                 >
                   {link.name}
                 </NavLink>
@@ -48,7 +59,10 @@ const Navbar = () => {
           </ul>
 
           {/* Book Appointment Button */}
-          <Link to='/book-appointment' className="bg-[#D4AF37] text-[#1F3D2B] px-3 py-1.5 rounded-full font-semibold hover:bg-[#c5a032] transition-all duration-300 transform hover:scale-105 shadow-md">
+          <Link
+            to="/book-appointment"
+            className="bg-[#3f5b4a] text-[#FFF8E7] text-[11px] px-4 py-2 rounded-full font-semibold hover:bg-[#315C3A] transition-all duration-300 transform hover:scale-105 shadow-sm"
+          >
             Book Appointment
           </Link>
         </div>
@@ -57,33 +71,40 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-[#FFF8E7] hover:text-[#D4AF37] transition-colors"
+            className="text-[#1F3D2B] hover:text-[#B38F24] transition-colors p-1"
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden mt-4 bg-[#1F3D2B] rounded-lg border border-[#D4AF37]/20 py-4 px-6">
-          <ul className="flex flex-col space-y-4">
+        <div className="md:hidden mt-3 bg-[#FFFFFF]/95 backdrop-blur-md rounded-2xl border border-[#1F3D2B]/10 py-4 px-6 shadow-lg">
+          <ul className="flex flex-col space-y-3">
             {navLinks.map((link) => (
-              <li key={link}>
-                <button
-                  onClick={() => handleLinkClick(link)}
-                  className={`text-[#FFF8E7] hover:text-[#D4AF37] transition-colors duration-300 w-full text-left text-sm tracking-wide ${
-                    activeLink === link ? 'text-[#D4AF37]' : ''
-                  }`}
+              <li key={link.path}>
+                <NavLink
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    `block text-sm font-semibold tracking-wide transition-colors duration-300 ${
+                      isActive ? 'text-[#B38F24]' : 'text-[#1F3D2B] hover:text-[#B38F24]'
+                    }`
+                  }
                 >
-                  {link}
-                </button>
+                  {link.name}
+                </NavLink>
               </li>
             ))}
-            <li>
-              <button className="bg-[#D4AF37] text-[#1F3D2B] px-6 py-2 rounded-full font-semibold hover:bg-[#c5a032] transition-all duration-300 w-full mt-2">
+            <li className="pt-2">
+              <Link
+                to="/book-appointment"
+                onClick={() => setIsOpen(false)}
+                className="block text-center bg-[#3f5b4a] text-[#FFF8E7] text-xs px-5 py-2.5 rounded-full font-semibold hover:bg-[#315C3A] transition-all duration-300 w-full shadow-sm"
+              >
                 Book Appointment
-              </button>
+              </Link>
             </li>
           </ul>
         </div>

@@ -58,12 +58,12 @@ const WhyChoose = () => {
 
   return (
     /* Main Section Light Background */
-    <section className="py-16 md:py-24 bg-gradient-to-r from-[#FFFFFF] via-[#FAF6ED] to-[#F5EFE0]">
+    <section className="py-5 md:py-10 bg-gradient-to-r from-[#FFFFFF] via-[#FAF6ED] to-[#F5EFE0]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#1F3D2B]/5 backdrop-blur-sm px-4 py-2 rounded-full border border-[#1F3D2B]/15 mb-4">
+          <div className="inline-flex items-center gap-2 bg-[#1F3D2B]/5 backdrop-blur-sm px-4 py-2 rounded border border-[#1F3D2B]/15 mb-4">
             <Star size={16} className="text-[#B38F24]" />
             <span className="text-[#1F3D2B] text-xs font-semibold tracking-[0.2em] uppercase">
               Why Choose Us
@@ -89,7 +89,7 @@ const WhyChoose = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative rounded-2xl overflow-hidden bg-[#FFFDF9] border border-[#1F3D2B]/10 hover:border-[#B38F24]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1F3D2B]/10 min-h-[260px] flex flex-col justify-between"
+              className="group relative rounded overflow-hidden bg-[#FFFDF9] border border-[#1F3D2B]/10 hover:border-[#B38F24]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1F3D2B]/10 min-h-[260px] flex flex-col justify-between"
             >
               {/* Background Image: Visible by default & enhances on Hover */}
               <div 
@@ -98,7 +98,7 @@ const WhyChoose = () => {
               ></div>
 
               {/* Halka Soft Green Radial Overlay (#1F3D2B/60) - Expands from center on Hover */}
-              <span className="absolute inset-0 m-auto w-1 h-1 bg-[#1F3D2B]/60 rounded-full scale-0 group-hover:scale-[350] transition-transform duration-700 ease-out pointer-events-none z-0"></span>
+              <span className="absolute inset-0 m-auto w-1 h-1 bg-[#1F3D2B]/60 rounded scale-0 group-hover:scale-[350] transition-transform duration-700 ease-out pointer-events-none z-0"></span>
 
               {/* Card Content */}
               <div className="relative p-6 z-10 h-full flex flex-col justify-between">
@@ -109,7 +109,7 @@ const WhyChoose = () => {
                   </div>
                   
                   {/* Icon Container */}
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#1F3D2B]/10 text-[#1F3D2B] mb-4 group-hover:bg-[#B38F24] group-hover:text-[#FFF8E7] transition-all duration-500 border border-[#1F3D2B]/15 group-hover:border-[#B38F24]">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded bg-[#1F3D2B]/10 text-[#1F3D2B] mb-4 group-hover:bg-[#B38F24] group-hover:text-[#FFF8E7] transition-all duration-500 border border-[#1F3D2B]/15 group-hover:border-[#B38F24]">
                     <feature.icon size={24} />
                   </div>
                   

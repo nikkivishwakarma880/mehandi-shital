@@ -12,6 +12,7 @@ import {
   Calendar,
   Crown
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const PopularDesigns = () => {
   const designs = [
@@ -73,12 +74,12 @@ const PopularDesigns = () => {
 
   return (
     /* Light Background: Right side slightly darker cream, Left side ultra light / white */
-    <section className="py-16 md:py-24 bg-gradient-to-l from-[#f0e8d6] via-[#FAF6ED] to-[#FFFFFF]">
+    <section className="py-5 md:py-10 bg-gradient-to-l from-[#f0e8d6] via-[#FAF6ED] to-[#FFFFFF]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#1F3D2B]/5 backdrop-blur-sm px-4 py-2 rounded-full border border-[#1F3D2B]/15 mb-4">
+          <div className="inline-flex items-center gap-2 bg-[#1F3D2B]/5 backdrop-blur-sm px-4 py-2 rounded border border-[#1F3D2B]/15 mb-4">
             <Sparkles size={16} className="text-[#B38F24]" />
             <span className="text-[#1F3D2B] text-xs font-semibold tracking-[0.2em] uppercase">
               Popular Mehndi Designs
@@ -102,7 +103,7 @@ const PopularDesigns = () => {
           {designs.map((design, index) => (
             <div
               key={index}
-              className="group relative rounded-2xl overflow-hidden bg-white/70 backdrop-blur-md border border-[#1F3D2B]/10 hover:border-[#B38F24]/40 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#B38F24]/10"
+              className="group relative rounded overflow-hidden bg-white/70 backdrop-blur-md border border-[#1F3D2B]/10 hover:border-[#B38F24]/40 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#B38F24]/10"
             >
               {/* Background Image with Light Overlay */}
               <div 
@@ -118,7 +119,7 @@ const PopularDesigns = () => {
               {/* Content */}
               <div className="relative p-6 z-10 min-h-[280px] flex flex-col">
                 {/* Icon */}
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#1F3D2B]/10 backdrop-blur-sm text-[#507a61] mb-4 group-hover:bg-[#1F3D2B] group-hover:text-[#FFF8E7] transition-all duration-300 border border-[#1F3D2B]/15">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded bg-[#1F3D2B]/10 backdrop-blur-sm text-[#507a61] mb-4 group-hover:bg-[#1F3D2B] group-hover:text-[#FFF8E7] transition-all duration-300 border border-[#1F3D2B]/15">
                   <design.icon size={24} />
                 </div>
                 
@@ -142,7 +143,7 @@ const PopularDesigns = () => {
                   {design.perfectFor.map((item, idx) => (
                     <span 
                       key={idx}
-                      className="inline-flex items-center gap-1 bg-[#1F3D2B]/5 px-2.5 py-1 rounded-full border border-[#1F3D2B]/10 text-[#1F3D2B]/80 text-[10px] font-medium"
+                      className="inline-flex items-center gap-1 bg-[#1F3D2B]/5 px-2.5 py-1 rounded border border-[#1F3D2B]/10 text-[#1F3D2B]/80 text-[10px] font-medium"
                     >
                       <Heart size={10} className="text-[#B38F24]" />
                       {item}
@@ -159,24 +160,24 @@ const PopularDesigns = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="inline-block bg-white/60 backdrop-blur-md rounded-3xl p-8 md:p-10 border border-[#1F3D2B]/10 max-w-3xl mx-auto shadow-sm">
+          <div className="inline-block bg-white/60 backdrop-blur-md rounded p-8 md:p-10 border border-[#1F3D2B]/10 max-w-3xl mx-auto shadow-sm">
             <h3 className="text-[#1F3D2B] text-2xl sm:text-3xl font-serif font-bold mb-3">
-              Which Design Will{' '}
+              Which Design Will{' '} 
               <span className="text-[#B38F24]">Tell Your Story?</span>
             </h3>
             <p className="text-[#1F3D2B]/70 text-sm mb-6">
               Choose your favourite style and let Shital Artist turn your hands into a beautiful piece of art.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <button className="group inline-flex items-center gap-2 border-2 border-[#1F3D2B]/20 text-[#1F3D2B] px-6 py-2.5 rounded-full font-semibold text-xs hover:bg-[#1F3D2B] hover:text-[#FFF8E7] transition-all duration-300 transform hover:-translate-y-1 shadow-sm">
+              <button className="group inline-flex items-center gap-2 border-2 border-[#1F3D2B]/20 text-[#1F3D2B] px-6 py-2.5 rounded font-semibold text-xs hover:bg-[#1F3D2B] hover:text-[#FFF8E7] transition-all duration-300 transform hover:-translate-y-1 shadow-sm">
                 Explore Gallery
                 <Eye size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
               </button>
               
-              <button className="group inline-flex items-center gap-2 bg-[#1F3D2B] text-[#FFF8E7] px-6 py-2.5 rounded-full font-bold text-xs hover:bg-[#315C3A] transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+              <Link to='/book-appointment' className="group inline-flex items-center gap-2 bg-[#1F3D2B] text-[#FFF8E7] px-6 py-2.5 rounded font-bold text-xs hover:bg-[#315C3A] transition-all duration-300 transform hover:-translate-y-1 shadow-md">
                 Book Your Mehndi
                 <Calendar size={16} className="group-hover:scale-110 transition-transform duration-300" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

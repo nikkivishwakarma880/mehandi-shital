@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
-
+import shitalLogo from '../assets/shital-logo.png'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,9 +23,9 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img
-            src="/shital-logo.png"
+            src={shitalLogo}
             alt="Shital Artist Logo"
-            className="w-11 h-11 object-contain"
+            className="w-12 h-12 object-contain"
           />
           <div>
             <h1 className="text-[#142b1d] text-[16px] font-bold tracking-wider font-serif">
@@ -61,7 +61,7 @@ const Navbar = () => {
           {/* Book Appointment Button */}
           <Link
             to="/book-appointment"
-            className="bg-[#3f5b4a] text-[#FFF8E7] text-[11px] px-4 py-2 rounded-full font-semibold hover:bg-[#315C3A] transition-all duration-300 transform hover:scale-105 shadow-sm"
+            className="bg-[#3f5b4a] text-[#FFF8E7] text-[11px] px-4 py-2 rounded font-semibold hover:bg-[#315C3A] transition-all duration-300 transform hover:scale-105 shadow-sm"
           >
             Book Appointment
           </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden mt-3 bg-[#FFFFFF]/95 backdrop-blur-md rounded-2xl border border-[#1F3D2B]/10 py-4 px-6 shadow-lg">
+        <div className="md:hidden mt-3 bg-[#FFFFFF]/95 backdrop-blur-md rounded border border-[#1F3D2B]/10 py-4 px-6 shadow-lg">
           <ul className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <li key={link.path}>
@@ -101,7 +101,7 @@ const Navbar = () => {
               <Link
                 to="/book-appointment"
                 onClick={() => setIsOpen(false)}
-                className="block text-center bg-[#3f5b4a] text-[#FFF8E7] text-xs px-5 py-2.5 rounded-full font-semibold hover:bg-[#315C3A] transition-all duration-300 w-full shadow-sm"
+                className="block text-center bg-[#3f5b4a] text-[#FFF8E7] text-xs px-5 py-2.5 rounded font-semibold hover:bg-[#315C3A] transition-all duration-300 w-full shadow-sm"
               >
                 Book Appointment
               </Link>

@@ -15,7 +15,7 @@ const Footer = () => {
 
   return (
     /* Light Background: Left to Right (White -> Soft Cream -> Warm Light Gold) */
-    <footer className="bg-gradient-to-r from-[#f7f3f3] via-[#FAF6ED] to-[#F5EFE0] text-[#1F3D2B] border-t border-[#1F3D2B]/10">
+    <footer className="bg-[#1F3D2B] text-[white] border-t border-[#1F3D2B]/10">
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -23,14 +23,14 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <div>
-              <h3 className="text-[#1F3D2B] text-xl font-serif font-bold tracking-wider">
+              <h3 className="text-[#B38F24] text-xl font-serif font-bold tracking-wider">
                 Shital Artist
               </h3>
               <p className="text-[#B38F24] text-xs tracking-widest font-semibold uppercase">
                 Bridal & Artistry
               </p>
             </div>
-            <p className="text-[#1F3D2B]/80 text-xs leading-relaxed">
+            <p className="text-[#FFFFFF]/80 text-xs leading-relaxed">
               Creating timeless mehndi designs that tell your unique love story. 
               Where tradition meets artistry, making every celebration extraordinary.
             </p>
@@ -46,7 +46,7 @@ const Footer = () => {
                 <li key={link}>
                   <a 
                     href="#" 
-                    className="text-[#1F3D2B]/85 text-xs hover:text-[#B38F24] transition-colors duration-300 font-medium"
+                    className="text-[#F5E7CF]/85 text-xs hover:text-[#B38F24] transition-colors duration-300 font-medium"
                   >
                     {link}
                   </a>
@@ -65,7 +65,7 @@ const Footer = () => {
                 <li key={service}>
                   <a 
                     href="#" 
-                    className="text-[#1F3D2B]/85 text-xs hover:text-[#B38F24] transition-colors duration-300 font-medium"
+                    className="text-[#F5E7CF]/85 text-xs hover:text-[#B38F24] transition-colors duration-300 font-medium"
                   >
                     {service}
                   </a>
@@ -82,25 +82,25 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
                 <MapPin size={18} className="text-[#B38F24] mt-0.5 flex-shrink-0" />
-                <span className="text-[#1F3D2B]/85 text-xs font-medium">
+                <span className="text-[#F5E7CF]/85 text-xs font-medium">
                   Gorakhpur, Uttar Pradesh, India
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone size={18} className="text-[#B38F24] flex-shrink-0" />
-                <span className="text-[#1F3D2B]/85 text-xs font-medium">
+                <span className="text-[#F5E7CF]/85 text-xs font-medium">
                   +91 6393430756
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail size={18} className="text-[#B38F24] flex-shrink-0" />
-                <span className="text-[#1F3D2B]/85 text-xs font-medium">
+                <span className="text-[#F5E7CF]/85 text-xs font-medium">
                   shital@mehndigrace.com
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Clock size={18} className="text-[#B38F24] flex-shrink-0" />
-                <span className="text-[#1F3D2B]/85 text-xs font-medium">
+                <span className="text-[#F5E7CF]/85 text-xs font-medium">
                   Mon – Sun: 10:00 AM – 8:00 PM
                 </span>
               </li>
@@ -110,13 +110,13 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-[#1F3D2B]/15 bg-[#1F3D2B]/5">
+      <div className="border-t border-[#1F3D2B]/15 bg-[#F5E7CF]/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-[#1F3D2B]/80 text-xs font-medium">
+            <p className="text-[#F5E7CF]/80 text-xs font-medium">
               © 2026 Shital Artist. All Rights Reserved.
             </p>
-            <div className="flex items-center gap-2 text-[#1F3D2B]/80 text-xs font-medium">
+            <div className="flex items-center gap-2 text-[#F5E7CF]/80 text-xs font-medium">
               <span>Bridal Mehndi</span>
               <span className="text-[#B38F24]">•</span>
               <span>Traditional Art</span>

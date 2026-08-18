@@ -1,6 +1,8 @@
 // SectionHeading.jsx
 import React from 'react';
 import { Sparkles, Heart, Award, MapPin, Palette, ArrowRight } from 'lucide-react';
+import artist from '../../assets/artist.png'
+
 
 const SectionHeading = () => {
   const highlights = [
@@ -18,7 +20,7 @@ const SectionHeading = () => {
 
         {/* Centered Header Section */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#1F3D2B]/5 backdrop-blur-sm px-4 py-2 rounded-full border border-[#1F3D2B]/15 mb-4">
+          <div className="inline-flex items-center gap-2 bg-[#1F3D2B]/5 backdrop-blur-sm px-4 py-2 rounded border border-[#1F3D2B]/15 mb-4">
             <Sparkles size={16} className="text-[#B38F24]" />
             <span className="text-[#1F3D2B] text-xs font-semibold tracking-[0.2em] uppercase">
               Meet The Artist
@@ -38,16 +40,16 @@ const SectionHeading = () => {
           </p>
         </div>
 
-        {/* Image & Content Side by Side */}
+         {/* Image & Content Side by Side */}
         <div className="flex flex-col md:flex-row items-stretch gap-12 md:gap-16">
 
           {/* Left Side - Image */}
           <div className="flex-1 flex justify-center md:justify-start">
             <div className="relative w-full max-w-sm md:max-w-md">
 
-              <div className="relative rounded-2xl overflow-hidden shadow-xl shadow-[#B38F24]/10 border border-[#1F3D2B]/15">
+              <div className="relative rounded overflow-hidden shadow-xl shadow-[#B38F24]/10 border border-[#1F3D2B]/15">
                 <img
-                  src="/artist.png"
+                  src={artist} 
                   alt="Shital - Mehndi Artist"
                   className="w-full h-90 object-cover hover:scale-105 transition-transform duration-600"
                 />
@@ -57,13 +59,13 @@ const SectionHeading = () => {
               </div>
 
               {/* Decorative elements */}
-              <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-[#B38F24]/40 rounded-tl-2xl"></div>
+              <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-[#B38F24]/40 rounded-tl"></div>
 
-              <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-[#B38F24]/40 rounded-br-2xl"></div>
+              <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-[#B38F24]/40 rounded-br"></div>
 
               {/* Floating badge */}
-              <div className="absolute -bottom-2 -right-2 bg-[#3f5b4a] text-[#FFF8E7] px-4 py-2 rounded-full text-xs font-bold shadow-lg">
-                ✨ 5+ Years Experience
+              <div className="absolute -bottom-2 -right-2 bg-[#3f5b4a] text-[#FFF8E7] px-4 py-2 rounded text-xs font-bold shadow-lg">
+                5+ Years Experience
               </div>
 
             </div>
@@ -94,7 +96,7 @@ const SectionHeading = () => {
               {highlights.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 bg-[#3f5b4a]/5 rounded-xl p-3 border border-[#1F3D2B]/10 hover:border-[#B38F24]/40 transition-all duration-300 hover:bg-[#1F3D2B]/10"
+                  className="flex items-center gap-2 bg-[#3f5b4a]/5 rounded p-3 border border-[#1F3D2B]/10 hover:border-[#B38F24]/40 transition-all duration-300 hover:bg-[#1F3D2B]/10"
                 >
                   <item.icon
                     size={16}
@@ -112,7 +114,7 @@ const SectionHeading = () => {
             <div className="flex flex-col sm:flex-row items-start gap-3">
 
               <button className="group inline-flex items-center gap-2 border-2
-               border-[#1F3D2B]/20 text-[#1F3D2B] px-6 py-2.5 rounded-full 
+               border-[#1F3D2B]/20 text-[#1F3D2B] px-6 py-2.5 rounded 
                font-semibold text-xs backdrop-blur-sm hover:bg-[#3f5b4a]
                 hover:text-[#FFF8E7] transition-all duration-300 transform 
                 hover:-translate-y-1 shadow-sm">
@@ -123,7 +125,7 @@ const SectionHeading = () => {
                 />
               </button>
 
-              <button className="group inline-flex items-center gap-2 bg-[#3f5b4a] text-[#FFF8E7] px-5 py-2.5 rounded-full font-bold text-xs hover:bg-[#315C3A] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg">
+              <button className="group inline-flex items-center gap-2 bg-[#3f5b4a] text-[#FFF8E7] px-5 py-2.5 rounded font-bold text-xs hover:bg-[#315C3A] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg">
                 Book an Appointment
                 <Sparkles
                   size={16}

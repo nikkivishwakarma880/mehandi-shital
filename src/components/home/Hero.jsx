@@ -6,13 +6,13 @@ const Hero = () => {
   return (
     /* Light Background: Left side pure white/light cream, Right side soft golden-cream */
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-r from-[#FFFFFF] via-[#FAF6ED] to-[#F5EFE0]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-5 md:py-10">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
 
           {/* Left Side - Content */}
           <div className="flex-1 max-w-2xl">
             {/* Decorative Top Badge */}
-            <div className="inline-flex items-center gap-1 bg-[#1F3D2B]/5 backdrop-blur-md px-4 py-1.5 rounded-full border border-[#1F3D2B]/15 shadow-inner mb-6 transition-transform hover:scale-105">
+            <div className="inline-flex items-center gap-1 bg-[#1F3D2B]/5 backdrop-blur-md px-4 py-1.5 rounded border border-[#1F3D2B]/15 shadow-inner mb-6 transition-transform hover:scale-105">
               <Sparkles size={14} className="text-[#B38F24] animate-pulse" />
               <span className="text-[#1F3D2B] text-[8px] sm:text-xs font-semibold tracking-[0.2em] uppercase">
                 Handcrafted With Love
@@ -42,14 +42,14 @@ const Hero = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
-              <button className="group w-full sm:w-auto bg-[#3f5b4a] text-[#FFF8E7] px-5 py-2.5 rounded-full font-bold text-xs sm:text-xs hover:bg-[#34573b] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg flex items-center justify-center gap-3">
+              <button className="group w-full sm:w-auto bg-[#3f5b4a] text-[#FFF8E7] px-5 py-2.5 rounded font-bold text-xs sm:text-xs hover:bg-[#34573b] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg flex items-center justify-center gap-3">
                 Book Your Appointment
                 <ArrowRight
                   size={18}
                   className="group-hover:translate-x-1.5 transition-transform duration-300"
                 />
               </button>
-              <button className="w-full sm:w-auto border-2 border-[#1F3D2B]/20 text-[#1F3D2B] px-5 py-2.5 rounded-full font-semibold text-xs sm:text-xs backdrop-blur-sm hover:bg-[#3f5b4a] hover:text-[#FFF8E7] transition-all duration-300 transform hover:-translate-y-1 shadow-sm">
+              <button className="w-full sm:w-auto border-2 border-[#1F3D2B]/20 text-[#1F3D2B] px-5 py-2.5 rounded font-semibold text-xs sm:text-xs backdrop-blur-sm hover:bg-[#3f5b4a] hover:text-[#FFF8E7] transition-all duration-300 transform hover:-translate-y-1 shadow-sm">
                 Explore Our Designs
               </button>
             </div>
@@ -76,11 +76,11 @@ const Hero = () => {
           {/* Right Side - Image */}
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative w-full max-w-md md:max-w-lg lg:max-w-xl">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl shadow-[#B38F24]/10 border border-[#1F3D2B]/15">
+              <div className="relative rounded overflow-hidden shadow-xl shadow-[#B38F24]/10 border border-[#1F3D2B]/15">
                 <img
                   src="https://i.pinimg.com/736x/60/d3/7e/60d37ec978be5bfd0e1493edb7fbecb6.jpg"
                   alt="Beautiful Mehndi Designs"
-                  className="w-[400px] h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
                 />
 
                 {/* Decorative overlay gradient */}
@@ -88,8 +88,8 @@ const Hero = () => {
               </div>
 
               {/* Decorative elements around image */}
-              <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-[#B38F24]/40 rounded-tl-2xl"></div>
-              <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-[#B38F24]/40 rounded-br-2xl"></div>
+              <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-[#B38F24]/40 rounded-tl"></div>
+              <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-[#B38F24]/40 rounded-br"></div>
             </div>
           </div>
         </div>

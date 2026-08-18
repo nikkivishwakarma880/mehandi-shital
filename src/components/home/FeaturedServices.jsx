@@ -11,6 +11,7 @@ import {
   Palette,
   CalendarHeart
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FeaturedServices = () => {
   const services = [
@@ -72,18 +73,18 @@ const FeaturedServices = () => {
 
   return (
     /* Light Background: Left to Right (White -> Soft Cream -> Warm Light Gold) */
-    <section className="py-16 md:py-20 bg-gradient-to-r from-[#FFFFFF] via-[#FAF6ED] to-[#F5EFE0]">
+    <section className="py-8 md:py-10 bg-gradient-to-r from-[#FFFFFF] via-[#FAF6ED] to-[#F5EFE0]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto md:mb-3">
-          <div className="inline-flex items-center gap-2 bg-[#1F3D2B]/5 backdrop-blur-sm px-4 py-2 rounded-full border border-[#1F3D2B]/15 mb-4">
+          <div className="inline-flex items-center gap-2 bg-[#1F3D2B]/5 backdrop-blur-sm px-4 py-2 rounded border border-[#1F3D2B]/15 mb-4">
             <Sparkles size={16} className="text-[#B38F24]" />
             <span className="text-[#1F3D2B] text-xs font-semibold tracking-[0.2em] uppercase">
               Our Services
             </span>
             <Sparkles size={16} className="text-[#B38F24]" />
-          </div>
+          </div>       
           
           <h2 className="text-[#1F3D2B] text-3xl sm:text-4xl md:text-4xl font-serif font-bold mb-4">
             OUR <span className="text-[#B38F24]">FEATURED SERVICES</span>
@@ -104,7 +105,7 @@ const FeaturedServices = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="group relative rounded-2xl overflow-hidden bg-[#1F3D2B] border border-[#1F3D2B]/15 hover:border-[#B38F24]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#B38F24]/10 min-h-[320px] flex flex-col justify-between"
+              className="group relative rounded overflow-hidden bg-[#1F3D2B] border border-[#1F3D2B]/15 hover:border-[#B38F24]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#B38F24]/10 min-h-[320px] flex flex-col justify-between"
             >
               {/* Background Image */}
               <div 
@@ -122,7 +123,7 @@ const FeaturedServices = () => {
               <div className="relative z-10 p-6 md:p-8 flex flex-col justify-between h-full">
                 <div>
                   {/* Icon */}
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#B38F24]/20 border border-[#B38F24]/30 mb-4 group-hover:bg-[#B38F24]/40 transition-colors duration-300 backdrop-blur-sm">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded bg-[#B38F24]/20 border border-[#B38F24]/30 mb-4 group-hover:bg-[#B38F24]/40 transition-colors duration-300 backdrop-blur-sm">
                     <service.icon size={28} className="text-[#FFF8E7]" />
                   </div>
 
@@ -142,7 +143,7 @@ const FeaturedServices = () => {
                   </p>
                 </div>
 
-                {/* Button */}
+                {/* Button */} 
                 <button className="group/btn inline-flex items-center gap-2 text-[#F3E5AB] text-sm font-semibold hover:text-[#FFFFFF] transition-colors duration-300 w-fit drop-shadow-md">
                   {service.buttonText}
                   <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform duration-300" />
@@ -154,7 +155,7 @@ const FeaturedServices = () => {
 
         {/* Bottom CTA Section */}
         <div className="mt-16 md:mt-18">
-          <div className="relative bg-gradient-to-r from-[#1F3D2B]/5 via-[#1F3D2B]/10 to-[#1F3D2B]/5 backdrop-blur-sm rounded-3xl p-8 md:p-6 text-center border border-[#1F3D2B]/15 overflow-hidden shadow-sm">
+          <div className="relative bg-gradient-to-r from-[#1F3D2B]/5 via-[#1F3D2B]/10 to-[#1F3D2B]/5 backdrop-blur-sm rounded p-8 md:p-6 text-center border border-[#1F3D2B]/15 overflow-hidden shadow-sm">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-[#B38F24]/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#B38F24]/10 rounded-full blur-3xl"></div>
@@ -168,12 +169,12 @@ const FeaturedServices = () => {
                 Let our mehndi artistry become a part of your most cherished memories.
               </p>
               
-              <button className="group inline-flex mt-4 text-xs items-center gap-1.5 
-              bg-[#3f5b4a] text-[#FFF8E7] px-5 py-2.5 rounded-full font-bold
+              <Link to='/book-appointment' className="group inline-flex mt-4 text-xs items-center gap-1.5 
+              bg-[#3f5b4a] text-[#FFF8E7] px-5 py-2.5 rounded font-bold
                hover:bg-[#477150] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg">
                 Book Your Appointment
                 <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform duration-300 text-[#B38F24]" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

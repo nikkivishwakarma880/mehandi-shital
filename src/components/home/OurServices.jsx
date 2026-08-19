@@ -4,41 +4,40 @@ import { Sparkles, Heart, Flower2, Leaf, Star, Palette, Calendar, ChevronRight }
 const OurServices = () => {
   const services = [
     {
+      id: 1,
       icon: <Sparkles className="w-8 h-8" />,
-      title: "Bridal Mehndi",
-      description: "Make your special day even more memorable with detailed and elegant bridal mehndi designs, thoughtfully customized to complement your wedding style.",
+      title: "Minimal Mehndi",
+      subtitle: "Simple • Elegant • Modern",
+      description: "For clients who love clean, subtle, and sophisticated designs. Minimal floral patterns, geometric accents, and fine line work.",
+      perfectFor: "Daily wear, office events, or minimal bridal touch.",
       gradient: "from-amber-50/50 to-rose-50/50"
-      
     },
     {
+      id: 2,
       icon: <Heart className="w-8 h-8" />,
-      title: "Engagement Mehndi",
-      description: "Elegant and graceful designs perfect for engagement ceremonies, combining modern patterns with traditional mehndi artistry.",
+      title: "Party & Festival Mehndi",
+      subtitle: "Fun • Festive • Eye-catching",
+      description: "Attractive, lively designs for every celebration. Bold motifs, Dholki special, Arabic & Indo-Arabic styles.",
+      perfectFor: "Karwa Chauth, Diwali, Eid, Sangeet, and family get-togethers.",
       gradient: "from-rose-50/50 to-pink-50/50"
     },
     {
-      icon: <Flower2 className="w-8 h-8" />,
-      title: "Party & Festive Mehndi",
-      description: "Beautiful and trendy mehndi designs for festivals, parties, family functions, and other celebrations.",
-      gradient: "from-purple-50/50 to-fuchsia-50/50"
-    },
-    {
-      icon: <Leaf className="w-8 h-8" />,
-      title: "Traditional Mehndi",
-      description: "Classic mehndi patterns inspired by traditional Indian artistry, perfect for those who love timeless and graceful designs.",
-      gradient: "from-green-50/50 to-emerald-50/50"
-    },
-    {
-      icon: <Star className="w-8 h-8" />,
-      title: "Arabic Mehndi",
-      description: "Stylish Arabic-inspired designs featuring flowing patterns, floral elements, and beautiful detailing for an elegant look.",
-      gradient: "from-blue-50/50 to-indigo-50/50"
-    },
-    {
+      id: 3,
       icon: <Palette className="w-8 h-8" />,
       title: "Customized Mehndi Designs",
-      description: "Have something special in mind? Get a personalized mehndi design created according to your preferences, outfit, occasion, and unique style.",
+      subtitle: "Personalized • Unique • Client-centric",
+      description: "Designs tailored to your outfit, occasion, and personality. Custom initials, hidden symbols, theme-based art.",
+      perfectFor: "Tell us your vision — we bring it to life on your hands!",
       gradient: "from-orange-50/50 to-amber-50/50"
+    },
+    {
+      id: 4,
+      icon: <Star className="w-8 h-8" />,
+      title: "Bridal Family Mehndi",
+      subtitle: "Complete • Coordinated • Memorable",
+      description: "For the bride and her entire squad — matching or complementary designs. Heavy bridal set with coordinated patterns for family.",
+      perfectFor: "Mother, sisters, cousins, and special guests.",
+      gradient: "from-blue-50/50 to-indigo-50/50"
     }
   ];
 
@@ -58,26 +57,25 @@ const OurServices = () => {
         {/* Header Section */}
         <div className="text-center mb-16 space-y-4">
           <p className="text-sm uppercase tracking-[0.3em] font-medium" style={{ color: '#B38F24' }}>
-            Our Services
+            ✨ Our Services
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-4xl font-bold leading-tight" style={{ color: '#315C3A' }}>
-            Beautiful Mehndi for
+            Mehndi Designs for
             <span className="block mt-2" style={{ color: '#B38F24' }}>Every Special Occasion</span>
           </h2>
           <div className="w-24 h-1 mx-auto rounded" style={{ backgroundColor: '#B38F24' }} />
           <p className="max-w-2xl mx-auto text-sm leading-relaxed mt-6" style={{ color: '#315C3A' }}>
-            From timeless bridal traditions to elegant festive designs, Shital Mehndi Artist creates 
-            customized mehndi that beautifully reflects your style, occasion, and personality. 
+            From minimal elegance to grand celebrations — we create art that tells your story.
             Every design is created with patience, creativity, and attention to detail.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {services.map((service) => (
             <div
-              key={index}
-              className="group relative  bg-white/80 backdrop-blur-sm rounded p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl border border-white/50"
+              key={service.id}
+              className="group relative bg-white/80 backdrop-blur-sm rounded p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl border border-white/50"
               style={{
                 boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
               }}
@@ -99,18 +97,33 @@ const OurServices = () => {
                 </div>
 
                 <h3 
-                  className="text-xl font-bold mb-3 transition-colors duration-300"
+                  className="text-xl font-bold mb-1 transition-colors duration-300"
                   style={{ color: '#315C3A' }}
                 >
                   {service.title}
                 </h3>
                 
                 <p 
+                  className="text-sm font-medium mb-3"
+                  style={{ color: '#B38F24' }}
+                >
+                  {service.subtitle}
+                </p>
+
+                <p 
                   className="text-sm leading-relaxed transition-colors duration-300"
                   style={{ color: '#315C3A' }}
                 >
                   {service.description}
                 </p>
+
+                {/* Perfect For */}
+                <div 
+                  className="mt-4 p-3 rounded bg-white/60 text-xs"
+                  style={{ color: '#315C3A' }}
+                >
+                  <span className="font-semibold" style={{ color: '#B38F24' }}>🎯 Perfect for:</span> {service.perfectFor}
+                </div>
 
                 {/* Decorative Line */}
                 <div 
@@ -120,7 +133,7 @@ const OurServices = () => {
               </div>
 
               {/* Hover Border Effect */}
-              <div className="absolute inset-0 rounded border-1 border-transparent group-hover:border-[#B99349] transition-all duration-500 pointer-events-none" />
+              <div className="absolute inset-0 rounded border border-transparent group-hover:border-[#B99349] transition-all duration-500 pointer-events-none" />
             </div>
           ))}
         </div>
@@ -148,16 +161,25 @@ const OurServices = () => {
                 Choose a design that feels uniquely yours and make every celebration a little more beautiful.
               </p>
 
-              <button 
-                className="group inline-flex items-center gap-3 px-5 py-3 rounded text-white font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-                style={{ 
-                  backgroundColor: '#B38F24',
-                  boxShadow: '0 8px 30px rgba(179, 143, 36, 0.3)'
-                }}
-              >
-                <span>Book Your Appointment</span>
-                <ChevronRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </button>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button 
+                  className="group inline-flex items-center gap-3 px-5 py-3 rounded text-white font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  style={{ 
+                    backgroundColor: '#B38F24',
+                    boxShadow: '0 8px 30px rgba(179, 143, 36, 0.3)'
+                  }}
+                >
+                  <span>📞 Book Appointment</span>
+                  <ChevronRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </button>
+              </div>
+
+              <div className="mt-6 text-sm" style={{ color: '#315C3A' }}>
+                <p>📸 Instagram: <strong style={{ color: '#B38F24' }}>@yourmehndiart</strong> &nbsp;|&nbsp; 📧 <strong style={{ color: '#B38F24' }}>info@yourmehndi.com</strong></p>
+                <p className="mt-2 italic text-sm" style={{ color: '#B38F24' }}>
+                  “Har occasion ke liye perfect mehndi — bas aapki ek call door!”
+                </p>
+              </div>
 
               {/* Decorative Elements */}
               <div className="absolute -top-3 -right-3 w-12 h-12 rounded border-2 border-[#dfc472] animate-pulse" />

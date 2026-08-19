@@ -1,5 +1,6 @@
 // PopularDesigns.jsx
 import React from 'react';
+import shital1 from '../../assets/shital1.png'
 import { 
   Sparkles, 
   Heart, 
@@ -22,7 +23,7 @@ const PopularDesigns = () => {
       description: 'Your wedding story, beautifully designed on your hands.',
       details: 'Intricate bridal patterns featuring florals, mandalas, traditional motifs, personalised elements and detailed storytelling designs.',
       perfectFor: ['Brides', 'Wedding Ceremonies'],
-      image: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://i.pinimg.com/736x/eb/32/f4/eb32f49f89e28d98758fba6bfdb53257.jpg',
       color: 'from-rose-500/10 via-rose-500/5 to-transparent',
     },
     {
@@ -31,7 +32,7 @@ const PopularDesigns = () => {
       description: 'Elegant, stylish & effortlessly beautiful.',
       details: 'Flowing floral patterns, leafy trails and graceful spacing create a modern Arabic look that feels both classy and eye-catching.',
       perfectFor: ['Engagements', 'Parties'],
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://i.pinimg.com/originals/54/c0/96/54c0963f1476fc74bf48f99232b224d5.jpg?nii=t',
       color: 'from-emerald-500/10 via-emerald-500/5 to-transparent',
     },
     {
@@ -40,7 +41,7 @@ const PopularDesigns = () => {
       description: 'A timeless touch of Indian tradition.',
       details: 'Classic paisleys, flowers, peacocks, mandalas and traditional motifs come together to create beautiful ethnic mehndi designs.',
       perfectFor: ['Festivals','Family Functions'],
-      image: 'https://images.unsplash.com/photo-1583143844622-3a65b9af3f78?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://i.pinimg.com/736x/50/a4/e6/50a4e6d964ca04d8ba6d7ce01c054dab.jpg',
       color: 'from-amber-500/10 via-amber-500/5 to-transparent',
     },
     {
@@ -49,7 +50,7 @@ const PopularDesigns = () => {
       description: 'Simple lines. Beautiful details. Maximum elegance.',
       details: 'For those who love a clean and sophisticated look, our minimal designs add just the right amount of charm without feeling too heavy.',
       perfectFor: ['Engagements','Modern Brides'],
-      image: 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://i.pinimg.com/736x/50/a4/e6/50a4e6d964ca04d8ba6d7ce01c054dab.jpg',
       color: 'from-indigo-500/10 via-indigo-500/5 to-transparent',
     },
     {
@@ -58,7 +59,7 @@ const PopularDesigns = () => {
       description: 'Where tradition meets modern artistry.',
       details: 'A beautiful combination of Indian detailing and Arabic flow, creating a balanced design that looks rich yet contemporary.',
       perfectFor: ['Weddings','Special Occasions'],
-      image: 'https://images.unsplash.com/photo-1532710093739-9470ac59d1e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://i.pinimg.com/474x/fc/53/e9/fc53e96c38800531a46f0d0aef9a0ed7.jpg',
       color: 'from-purple-500/10 via-purple-500/5 to-transparent',
     },
     {
@@ -67,13 +68,12 @@ const PopularDesigns = () => {
       description: 'Inspired by the beauty of nature.',
       details: 'Delicate flowers, vines and leafy patterns create a soft and feminine design that\'s perfect for anyone who loves elegant mehndi artistry.',
       perfectFor: ['Parties', 'Celebrations'],
-      image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://i.pinimg.com/videos/thumbnails/originals/6f/fe/51/6ffe51a4c693471539005b796ae02b72.0000000.jpg',
       color: 'from-pink-500/10 via-pink-500/5 to-transparent',
     },
   ];
 
   return (
-    /* Light Background: Right side slightly darker cream, Left side ultra light / white */
     <section className="py-5 md:py-10 bg-gradient-to-l from-[#f0e8d6] via-[#FAF6ED] to-[#FFFFFF]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -92,7 +92,7 @@ const PopularDesigns = () => {
             <span className="text-[#B38F24]">Art in Every Hand</span>
           </h2>
           
-          <p className="text-[#1F3D2B]/75 text-bold  text-xs max-w-1xl mx-auto">
+          <p className="text-[#1F3D2B]/75 text-bold text-xs max-w-1xl mx-auto">
             Explore Shital Artist's most loved mehndi styles, thoughtfully created to make every celebration extra special. 
             From intricate bridal patterns to elegant minimal designs, there's a perfect style for every occasion.
           </p>
@@ -105,16 +105,17 @@ const PopularDesigns = () => {
               key={index}
               className="group relative rounded overflow-hidden bg-white/70 backdrop-blur-md border border-[#1F3D2B]/10 hover:border-[#B38F24]/40 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#B38F24]/10"
             >
-              {/* Background Image with Light Overlay */}
+              {/* Background Image with Light Overlay - FIXED */}
               <div 
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110 group-hover:scale-100 transition-transform duration-700 opacity-20"
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 group-hover:scale-100 transition-transform duration-700"
                 style={{ backgroundImage: `url(${design.image})` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/50 to-white/90"></div>
+                {/* Overlay to ensure text readability */}
+                <div className="absolute inset-0 bg-white/70 group-hover:bg-white/50 transition-all duration-500"></div>
               </div>
               
               {/* Decorative Gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${design.color}`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${design.color} opacity-50`}></div>
               
               {/* Content */}
               <div className="relative p-6 z-10 min-h-[280px] flex flex-col">
@@ -134,7 +135,7 @@ const PopularDesigns = () => {
                 </p>
                 
                 {/* Details */}
-                <p className="text-[#1F3D2B]/70 text-xs leading-relaxed mb-3 flex-grow">
+                <p className="text-[#1F3D2B]/80 text-xs leading-relaxed mb-3 flex-grow">
                   {design.details}
                 </p>
                 

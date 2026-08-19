@@ -1,5 +1,13 @@
 // WhyChoose.jsx
 import React from 'react';
+// import artist1 from '../../assets/artist1.png'
+import artist1 from '../../assets/artist1.png'
+import artist2 from '../../assets/artist2.png'
+import artist3 from '../../assets/artist3.png'
+import artist4 from '../../assets/artist4.png'
+import artist5 from '../../assets/artist5.png'
+import artist6 from '../../assets/artist6.png'
+
 import { 
   Sparkles, 
   Heart, 
@@ -17,42 +25,42 @@ const WhyChoose = () => {
       number: '01',
       title: 'Creative & Unique Designs',
       description: 'हर design को आपकी पसंद, outfit और occasion के हिसाब से खूबसूरत और unique touch दिया जाता है।',
-      bgImage: '/artist1.png',
+      bgImage: artist1,
     },
     {
       icon: Heart,
       number: '02',
       title: 'Bridal Mehndi Expertise',
       description: 'Bridal mehndi में traditional patterns से लेकर modern detailing तक, आपकी शादी के लिए खास designs तैयार किए जाते हैं।',
-      bgImage: '/artist2.png',
+      bgImage:artist2,
     },
     {
       icon: Palette,
       number: '03',
       title: 'Customized Designs',
       description: 'आपकी पसंद हमारी inspiration है। आप जिस तरह का design चाहें, उसी style और theme के according mehndi तैयार की जाती है।',
-      bgImage: '/artist3.png',
+      bgImage: artist3,
     },
     {
       icon: PenTool,
       number: '04',
       title: 'Fine & Detailed Work',
       description: 'छोटी-छोटी detailing पर खास ध्यान दिया जाता है ताकि mehndi elegant, clean और beautifully finished लगे।',
-      bgImage: '/artist4.png',
+      bgImage: artist4,
     },
     {
       icon: Flower2,
       number: '05',
       title: 'Perfect for Every Occasion',
       description: 'Wedding, engagement, festivals, baby shower या कोई भी special occasion—हर celebration के लिए अलग और beautiful mehndi designs।',
-      bgImage: '/artist5.png',
+      bgImage: artist5,
     },
     {
       icon: MapPin,
       number: '06',
       title: 'Based in Gorakhpur',
       description: 'Gorakhpur में आसानी से उपलब्ध professional mehndi artistry, जहाँ आपकी special occasion की mehndi को खूबसूरत बनाने पर पूरा ध्यान दिया जाता है।',
-      bgImage: '/artist6.png',
+      bgImage: artist6,
     },
   ];
 
@@ -92,10 +100,10 @@ const WhyChoose = () => {
               className="group relative rounded overflow-hidden bg-[#FFFDF9] border border-[#1F3D2B]/10 hover:border-[#B38F24]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1F3D2B]/10 min-h-[260px] flex flex-col justify-between"
             >
               {/* Background Image: Visible by default & enhances on Hover */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35 group-hover:opacity-85 scale-100 group-hover:scale-110 transition-all duration-700 ease-out z-0"
-                style={{ backgroundImage: `url(${feature.bgImage})` }}
-              ></div>
+             <div 
+  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35 group-hover:opacity-85 scale-100 group-hover:scale-110 transition-all duration-700 ease-out z-0"
+  style={{ backgroundImage: `url(${feature.bgImage})` }}
+></div>
 
               {/* Halka Soft Green Radial Overlay (#1F3D2B/60) - Expands from center on Hover */}
               <span className="absolute inset-0 m-auto w-1 h-1 bg-[#1F3D2B]/60 rounded scale-0 group-hover:scale-[350] transition-transform duration-700 ease-out pointer-events-none z-0"></span>

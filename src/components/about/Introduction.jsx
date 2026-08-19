@@ -1,9 +1,11 @@
 import React from "react";
 import { Heart, Sparkles, Users, Award } from "lucide-react";
+import shital2 from '../../assets/shital2.png'
+import shital1 from '../../assets/shital1.png'
 
 // Sample image URLs - replace with your actual images
-const profileImage = "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=150&h=150&fit=crop&crop=face&auto=format";
-const bgMehndiImage = "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&auto=format&fit=crop&q=80"; // Main Card Background Image
+const profileImage = shital1 ;
+const bgMehndiImage = shital2; // Main Card Background 
 
 const Introduction = () => {
   return (

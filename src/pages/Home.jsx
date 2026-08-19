@@ -5,6 +5,7 @@ import SectionHeading from '../components/home/SectionHeading'
 import WhyChoose from '../components/home/WhyChoose'
 import PopularDesigns from '../components/home/PopularDesigns'
 import Gallery from '../components/home/Gallery'
+import Instagram from '../components/home/Instagram'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <WhyChoose />
       <PopularDesigns />
       <Gallery /> 
+      <Instagram />
       
     </div>
   )

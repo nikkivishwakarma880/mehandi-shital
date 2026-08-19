@@ -1,53 +1,54 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react';
+// import shital1 from '../../assets/shital1.png'
 
 // Sample Mehndi Images Data
 const galleryImages = [
   {
     id: 1,
-    url: 'https://cdn2.stylecraze.com/wp-content/uploads/2024/12/Mehndi-Designs.jpg.avif',
+    url: 'https://i.pinimg.com/originals/03/a1/0b/03a10b16a4e1a29bdf4db3e80952d370.jpg',
     title: 'Bridal Front Hand Mehndi',
     category: 'Bridal',
   },
   {
     id: 2,
-    url: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=800&auto=format&fit=crop',
+    url: 'https://i.pinimg.com/originals/46/76/67/4676679c55811efeb2c2b5dd423e4ce2.jpg?nii=t',
     title: 'Arabic Royal Pattern',
     category: 'Arabic',
   },
   {
     id: 3,
-    url: 'https://images.unsplash.com/photo-1590736969955-71cc94801759?q=80&w=800&auto=format&fit=crop',
+    url: 'https://i.pinimg.com/originals/a0/e3/b8/a0e3b836f866fcceacaa4c0cbd40916e.jpg?nii=t',
     title: 'Traditional Floral Motif',
     category: 'Traditional',
   },
   {
     id: 4,
-    url: 'https://images.unsplash.com/photo-1600003014608-c2355427d113?q=80&w=800&auto=format&fit=crop',
+    url: 'https://i.pinimg.com/originals/a3/42/b0/a342b0e5138c88546fbf406e9245f22d.jpg?nii=t',
     title: 'Minimalist Wrist Mehndi',
     category: 'Modern',
   },
   {
     id: 5,
-    url: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=800&auto=format&fit=crop',
+    url: 'https://i.pinimg.com/736x/d9/64/8a/d9648a7bab13cd6659ad35cf262c9931.jpg',
     title: 'Full Back Hand Design',
     category: 'Bridal',
   },
   {
     id: 6,
-    url: 'https://images.unsplash.com/photo-1563178406-4cdc2923acbc?q=80&w=800&auto=format&fit=crop',
+    url: 'https://i.pinimg.com/736x/3f/6e/42/3f6e4238be1e821f5a309f28a5507876.jpg',
     title: 'Intricate Geometric Art',
     category: 'Arabic',
   },
   {
     id: 7,
-    url: 'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop',
+    url: 'https://i.pinimg.com/736x/07/07/0e/07070ea8d14add5324d8d7416e08af70.jpg',
     title: 'Festive Special Henna',
     category: 'Festive',
   },
   {
     id: 8,
-    url: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop',
+    url: 'https://i.pinimg.com/originals/54/c0/96/54c0963f1476fc74bf48f99232b224d5.jpg?nii=t',
     title: 'Contemporary Mehndi Art',
     category: 'Modern',
   },

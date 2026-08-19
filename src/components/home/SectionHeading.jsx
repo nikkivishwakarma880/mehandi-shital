@@ -49,7 +49,7 @@ const SectionHeading = () => {
 
               <div className="relative rounded overflow-hidden shadow-xl shadow-[#B38F24]/10 border border-[#1F3D2B]/15">
                 <img
-                  src={artist} 
+                  src= {artist}
                   alt="Shital - Mehndi Artist"
                   className="w-full h-90 object-cover hover:scale-105 transition-transform duration-600"
                 />

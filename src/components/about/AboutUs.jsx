@@ -12,7 +12,7 @@ const AboutUs = () => {
             <FaLeaf />
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#315C3A] tracking-tight mb-4 font-serif">
-            About the Artist
+            Shital the Artist
           </h1>
           <p className="text-[#B99239] text-sm max-w-2xl mx-auto leading-relaxed">
             Welcome to my creative space! Main ek professional Mehndi Artist hoon, jo aapke weddings aur festivals ko royal traditional aur intricate henna designs se aur bhi khas banati hoon.
@@ -64,11 +64,11 @@ const AboutUs = () => {
         </div>
 
         {/* Quality Banner & Social Booking Section */}
-        <div className="bg-[#315C3A] text-white rounded-3xl p-8 md:p-10 shadow-xl text-center border-t-4 border-[#B99239]">
+        <div className="bg-[#315C3A] text-white rounded p-8 md:p-10 shadow-xl text-center border-t-4 border-[#B99239]">
           <h2 className="text-2xl md:text-3xl font-bold mb-3 font-serif text-[#B99239]">
             100% Pure & Organic Henna
           </h2>
-          <p className="text-emerald-50 text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-emerald-50 text-sm font-bold md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
             Aapki skin ki safety hamari pehli preference hai. Hum sirf natural, chemical-free homemade henna paste ka use karte hain, jo rich, dark stain ke sath skin-friendly bhi hota hai.
           </p>
           
@@ -79,21 +79,21 @@ const AboutUs = () => {
             <div className="flex justify-center gap-5">
               <a 
                 href="#" 
-                className="bg-[#B99239] hover:bg-[#a07e2f] p-4 rounded-full text-white transition-all hover:-translate-y-1 shadow-md"
+                className="bg-[#B99239] hover:bg-[#a07e2f] p-4 rounded text-white transition-all hover:-translate-y-1 shadow-md"
                 aria-label="Instagram"
               >
                 <FaInstagram className="text-xl" />
               </a>
               <a 
                 href="#" 
-                className="bg-[#B99239] hover:bg-[#a07e2f] p-4 rounded-full text-white transition-all hover:-translate-y-1 shadow-md"
+                className="bg-[#B99239] hover:bg-[#a07e2f] p-4 rounded text-white transition-all hover:-translate-y-1 shadow-md"
                 aria-label="WhatsApp"
               >
                 <FaWhatsapp className="text-xl" />
               </a>
               <a 
                 href="#" 
-                className="bg-[#B99239] hover:bg-[#a07e2f] p-4 rounded-full text-white transition-all hover:-translate-y-1 shadow-md"
+                className="bg-[#B99239] hover:bg-[#a07e2f] p-4 rounded text-white transition-all hover:-translate-y-1 shadow-md"
                 aria-label="Facebook"
               >
                 <FaFacebookF className="text-xl" />

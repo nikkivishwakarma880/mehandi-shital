@@ -11,14 +11,14 @@ const OurMehndiGallery = () => {
       id: 1,
       title: "Royal Bridal Motifs",
       category: "Bridal Mehndi",
-      image: "https://images.unsplash.com/photo-1595039838779-f3780873afd5?q=80&w=600&auto=format&fit=crop",
+      image: "https://i.pinimg.com/originals/c7/18/09/c7180929120b50e7a674cb7b84065760.jpg?nii=t",
       desc: "Detailed bride-groom figures & heritage artwork."
     },
     {
       id: 2,
       title: "Flowing Arabic Floral",
       category: "Arabic Mehndi",
-      image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+      image: "https://i.pinimg.com/474x/e2/c1/fe/e2c1fe4162a5570e3350b0f17e85e746.jpg",
       desc: "Bold lines with elegant floral flow."
     },
     {
@@ -39,14 +39,14 @@ const OurMehndiGallery = () => {
       id: 5,
       title: "Full-Arm Bridal Story",
       category: "Bridal Mehndi",
-      image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+      image: "https://i.pinimg.com/originals/ab/cb/15/abcb15b9ea740b80bc3542e1e9a8ac60.png?nii=t",
       desc: "Customized wedding ritual elements."
     },
     {
       id: 6,
       title: "Contemporary Arabic Vane",
       category: "Arabic Mehndi",
-      image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+      image: "https://i.pinimg.com/originals/1c/d4/0a/1cd40a9dc9079675395e33d444d725c4.jpg?nii=t",
       desc: "Spacious and chic modern vine work."
     },
     {
@@ -67,7 +67,7 @@ const OurMehndiGallery = () => {
       id: 9,
       title: "Minimal Finger Art",
       category: "Minimal Mehndi",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
+      image: "https://i.pinimg.com/originals/60/1d/b4/601db4ae62c469e8cedb54488c73e034.jpg",
       desc: "Simple yet elegant finger mehndi designs."
     },
     {
@@ -88,7 +88,7 @@ const OurMehndiGallery = () => {
       id: 12,
       title: "Royal Wedding Collection",
       category: "Bridal Mehndi",
-      image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+      image: "https://i.pinimg.com/474x/1d/51/3f/1d513f4a2cd7867eea65620b5a66432c.jpg?nii=t",
       desc: "Royal collection for the perfect wedding day."
     },
     {
@@ -102,21 +102,21 @@ const OurMehndiGallery = () => {
       id: 14,
       title: "Minimal Wrist Art",
       category: "Minimal Mehndi",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
+      image: "https://i.pinimg.com/originals/b1/3d/47/b13d47eb26c0334cd5abf2286641e9b1.jpg",
       desc: "Delicate wrist mehndi for everyday elegance."
     },
     {
       id: 15,
       title: "Bridal Feet Mehndi",
       category: "Bridal Mehndi",
-      image: "https://images.unsplash.com/photo-1595039838779-f3780873afd5?q=80&w=600&auto=format&fit=crop",
+      image: "https://i.pinimg.com/736x/c1/7b/cd/c17bcdca53b7ea5c2d52a8335404c546.jpg",
       desc: "Traditional bridal feet mehndi patterns."
     },
     {
       id: 16,
       title: "Arabic Vine Symphony",
       category: "Arabic Mehndi",
-      image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+      image: "https://i.pinimg.com/originals/d2/e1/33/d2e133568707b67ac1abc41a66450fc0.jpg",
       desc: "Beautiful flowing vine patterns in Arabic style."
     }
   ];

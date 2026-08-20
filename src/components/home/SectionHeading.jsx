@@ -75,7 +75,7 @@ const SectionHeading = () => {
           <div className="flex-1 max-w-2xl flex flex-col justify-between">
 
             {/* Content */}
-            <div className="space-y-3 text-[#1F3D2B]/80 text-sm leading-relaxed mb-6">
+            <div className="space-y-3 text-[#1F3D2B]/80 text-sm justify-center items-center leading-relaxed mb-6">
               <p>
                 <span className="text-[#B38F24] font-semibold">
                   Shital Mehndi Artist

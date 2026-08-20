@@ -84,7 +84,7 @@ const WhyChoose = () => {
             <span className="text-[#B38F24]">SHITAL ARTIST</span>
           </h2>
           
-          <p className="text-[#1F3D2B]/80 text-xs max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#1F3D2B]/80 text-xs justify-center items-center max-w-2xl mx-auto leading-relaxed">
             Your special moments deserve beautiful details.
             <br />
             At Shital Artist, every mehndi design is created with creativity, precision, and personal attention. 

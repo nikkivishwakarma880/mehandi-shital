@@ -21,7 +21,7 @@ const FeaturedServices = () => {
       title: 'Bridal Mehndi',
       subtitle: 'Your Love Story, Beautifully Designed',
       description: 'Intricate and personalized bridal mehndi crafted to make your wedding day truly unforgettable.',
-      buttonText: 'Explore Bridal Mehndi',
+      // buttonText: 'Explore Bridal Mehndi',
       image: 'https://i.pinimg.com/736x/bf/79/b9/bf79b9729b21fe68ad4b454815625e50.jpg',
     },
     {
@@ -30,7 +30,7 @@ const FeaturedServices = () => {
       title: 'Arabic Mehndi',
       subtitle: 'Elegant. Flowing. Timeless.',
       description: 'Graceful floral patterns, delicate trails, and modern Arabic-inspired designs perfect for a sophisticated look.',
-      buttonText: 'View Designs',
+      // buttonText: 'View Designs',
       image: 'https://i.pinimg.com/1200x/0b/f2/5e/0bf25eba359cddd03dae70b97db09287.jpg',
     },
     {
@@ -39,7 +39,7 @@ const FeaturedServices = () => {
       title: 'Engagement Mehndi',
       subtitle: 'A Beautiful Beginning',
       description: 'Elegant mehndi designs created specially for engagement ceremonies and pre-wedding celebrations.',
-      buttonText: 'Discover More',
+      // buttonText: 'Discover More',
       image: 'https://i.pinimg.com/736x/f3/60/10/f36010f7ec9c674643025c9b1584e134.jpg',
     },
     {
@@ -48,7 +48,7 @@ const FeaturedServices = () => {
       title: 'Party Mehndi',
       subtitle: 'Celebrate in Style',
       description: 'Beautiful and trendy designs for birthdays, festivals, family functions, and special gatherings.',
-      buttonText: 'Book Now',
+      // buttonText: 'Book Now',
       image: 'https://i.pinimg.com/736x/7b/2e/55/7b2e552038276f22e4176ef51916f551.jpg',
     },
     {
@@ -57,7 +57,7 @@ const FeaturedServices = () => {
       title: 'Traditional Mehndi',
       subtitle: 'Inspired by Timeless Art',
       description: 'Classic Indian patterns featuring traditional motifs and detailed designs that celebrate the beauty of our heritage.',
-      buttonText: 'View Designs',
+      // buttonText: 'View Designs',
       image: 'https://i.pinimg.com/736x/45/50/bb/4550bb7d49e38dddc820071a6918f978.jpg',
     },
     {
@@ -66,7 +66,7 @@ const FeaturedServices = () => {
       title: 'Customized Mehndi',
       subtitle: 'Designed Just for You',
       description: 'Have a special idea in mind? We create personalized mehndi designs based on your preferences, outfit, occasion, and story.',
-      buttonText: 'Create Your Design',
+      // buttonText: 'Create Your Design',
       image: 'https://i.pinimg.com/736x/e9/e6/d3/e9e6d3a499ea705c68fad26f3da14d5c.jpg',
     },
   ];
@@ -77,8 +77,8 @@ const FeaturedServices = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto md:mb-3">
-          <div className="inline-flex items-center gap-2 bg-[#1F3D2B]/5 backdrop-blur-sm px-4 py-2 rounded border border-[#1F3D2B]/15 mb-4">
+        <div className=" max-w-3xl text-center mx-auto md:mb-3">
+          <div className="inline-flex gap-2 bg-[#1F3D2B]/5 backdrop-blur-sm px-4 py-2 rounded border border-[#1F3D2B]/15 mb-4">
             <Sparkles size={16} className="text-[#B38F24]" />
             <span className="text-[#1F3D2B] text-xs font-semibold tracking-[0.2em] uppercase">
               Our Services
@@ -94,9 +94,8 @@ const FeaturedServices = () => {
             Beautiful Mehndi for Every Special Occasion
           </p>
           
-          <p className="text-[#1F3D2B]/80 text-sm sm:text-sm max-w-2xl mb-14 mx-auto leading-relaxed">
-            From intricate bridal designs to elegant Arabic patterns, our mehndi artistry is thoughtfully created 
-            to complement your style, celebration, and special moments.
+          <p className="text-[#1F3D2B]/80 text-sm sm:text-sm  mb-14  flex leading-relaxed">
+            From intricate bridal designs to elegant Arabic patterns our mehndi artistry is thoughtfully created to complement your style, celebration, and special moments.
           </p>
         </div>
 
@@ -146,7 +145,7 @@ const FeaturedServices = () => {
                 {/* Button */} 
                 <button className="group/btn inline-flex items-center gap-2 text-[#F3E5AB] text-sm font-semibold hover:text-[#FFFFFF] transition-colors duration-300 w-fit drop-shadow-md">
                   {service.buttonText}
-                  <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  {/* <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform duration-300" /> */}
                 </button>
               </div>
             </div>

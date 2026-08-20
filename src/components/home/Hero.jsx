@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
 
           {/* Left Side - Content */}
-          <div className="flex-1 max-w-2xl">
+          <div className="flex-1 max-w-3xl">
             {/* Decorative Top Badge */}
             <div className="inline-flex items-center gap-1 bg-[#1F3D2B]/5 backdrop-blur-md px-4 py-1.5 rounded border border-[#1F3D2B]/15 shadow-inner mb-6 transition-transform hover:scale-105">
               <Sparkles size={14} className="text-[#B38F24] animate-pulse" />
@@ -21,10 +21,11 @@ const Hero = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-[#1F3D2B] text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-serif font-extrabold leading-[1.15] tracking-tight mb-3">
-              Where Every Mehndi Tells a{" "}
+            <h1 className="text-[#1F3D2B] text-2xl sm:text-2xl md:text-2xl lg:text-xl font-serif font-extrabold leading-[1.14] tracking-tight mb-3">
+              Where Every Mehndi Tells a <br />
+
               <span className="bg-gradient-to-r from-[#B38F24] via-[#AA7C11] to-[#805D0D] bg-clip-text text-transparent block sm:inline italic font-normal">
-                Beautiful Story
+                 Beautiful Story
               </span>
             </h1>
 
@@ -41,15 +42,16 @@ const Hero = () => {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
-              <button className="group w-full sm:w-auto bg-[#3f5b4a] text-[#FFF8E7] px-5 py-2.5 rounded font-bold text-xs sm:text-xs hover:bg-[#34573b] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg flex items-center justify-center gap-3">
+            <div className="flex xs:flex-row items-center gap-2 mb-6">
+              <button className="group w-full  bg-[#3f5b4a] text-[#FFF8E7]
+               px-3 py-2 rounded font-bold text-xs xs:text-xs hover:bg-[#34573b] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg flex items-center justify-center gap">
                 Book Your Appointment
                 <ArrowRight
                   size={18}
                   className="group-hover:translate-x-1.5 transition-transform duration-300"
                 />
               </button>
-              <button className="w-full sm:w-auto border-2 border-[#1F3D2B]/20 text-[#1F3D2B] px-5 py-2.5 rounded font-semibold text-xs sm:text-xs backdrop-blur-sm hover:bg-[#3f5b4a] hover:text-[#FFF8E7] transition-all duration-300 transform hover:-translate-y-1 shadow-sm">
+              <button className="w-full border-2 border-[#1F3D2B]/20 text-[#1F3D2B] px-2 py-3 rounded font-semibold text-xs sm:text-xs backdrop-blur-sm hover:bg-[#3f5b4a] hover:text-[#FFF8E7] transition-all duration-300 transform  hover:-translate-y-1 shadow-sm">
                 Explore Our Designs
               </button>
             </div>

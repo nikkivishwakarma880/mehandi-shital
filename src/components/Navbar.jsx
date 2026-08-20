@@ -29,10 +29,10 @@ const Navbar = () => {
           />
           <div>
             <h1 className="text-[#142b1d] text-[16px] font-bold tracking-wider font-serif">
-              Shital Artist
+              ShitalVishwakarma
             </h1>
             <p className="text-[#B38F24] text-[9px] tracking-widest font-semibold uppercase">
-              Bridal & Artistry
+              Mehandi Art
             </p>
           </div>
         </Link>

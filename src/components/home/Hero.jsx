@@ -1,6 +1,7 @@
 // Hero.jsx
 import React from "react";
 import { ArrowRight, Sparkles, Heart, Star, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -43,14 +44,14 @@ const Hero = () => {
 
             {/* Buttons */}
             <div className="flex xs:flex-row items-center gap-2 mb-6">
-              <button className="group w-full  bg-[#3f5b4a] text-[#FFF8E7]
+              <Link to='/book-appointment' className="group w-full  bg-[#3f5b4a] text-[#FFF8E7]
                px-3 py-2 rounded font-bold text-xs xs:text-xs hover:bg-[#34573b] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg flex items-center justify-center gap">
                 Book Your Appointment
                 <ArrowRight
                   size={18}
                   className="group-hover:translate-x-1.5 transition-transform duration-300"
                 />
-              </button>
+              </Link>
               <button className="w-full border-2 border-[#1F3D2B]/20 text-[#1F3D2B] px-2 py-3 rounded font-semibold text-xs sm:text-xs backdrop-blur-sm hover:bg-[#3f5b4a] hover:text-[#FFF8E7] transition-all duration-300 transform  hover:-translate-y-1 shadow-sm">
                 Explore Our Designs
               </button>

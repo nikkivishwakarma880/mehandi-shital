@@ -29,7 +29,7 @@ const Navbar = () => {
           />
           <div>
             <h1 className="text-[#142b1d] text-[16px] font-bold tracking-wider font-serif">
-              ShitalVishwakarma
+              Shital Vishwakarma
             </h1>
             <p className="text-[#B38F24] text-[9px] tracking-widest font-semibold uppercase">
               Mehandi Art

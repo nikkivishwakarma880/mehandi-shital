@@ -2,6 +2,7 @@
 import React from 'react';
 import { Sparkles, Heart, Award, MapPin, Palette, ArrowRight } from 'lucide-react';
 import artist from '../../assets/artist.png'
+import { Link } from 'react-router-dom';
 
 
 const SectionHeading = () => {
@@ -15,7 +16,7 @@ const SectionHeading = () => {
 
   return (
     /* Light Background: Right to Left (F5EFE0 -> FAF6ED -> White) */
-    <section className="py-16 md:py-24 bg-gradient-to-l from-[#F5EFE0] via-[#FAF6ED] to-[#FFFFFF]">
+    <section className="py-16 md:py-15 bg-gradient-to-l from-[#F5EFE0] via-[#FAF6ED] to-[#FFFFFF]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Centered Header Section */}
@@ -125,13 +126,13 @@ const SectionHeading = () => {
                 />
               </button>
 
-              <button className="group inline-flex items-center gap-2 bg-[#3f5b4a] text-[#FFF8E7] px-5 py-2.5 rounded font-bold text-xs hover:bg-[#315C3A] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg">
+              <Link to ='/book-appointment' className="group inline-flex items-center gap-2 bg-[#3f5b4a] text-[#FFF8E7] px-5 py-2.5 rounded font-bold text-xs hover:bg-[#315C3A] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg">
                 Book an Appointment
                 <Sparkles
                   size={16}
                   className="group-hover:rotate-45 transition-transform duration-300 text-[#B38F24]"
                 />
-              </button>
+              </Link>
 
             </div>
           </div>

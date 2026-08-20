@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, Heart, Flower2, Leaf, Star, Palette, Calendar, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const OurServices = () => {
   const services = [
@@ -117,12 +118,12 @@ const OurServices = () => {
                   {service.description}
                 </p>
 
-                {/* Perfect For */}
+                Perfect For
                 <div 
-                  className="mt-4 p-3 rounded bg-white/60 text-xs"
+                  className="mt-4 p-3 rounded flex justify-center items-center bg-white/60 text-xs"
                   style={{ color: '#315C3A' }}
                 >
-                  <span className="font-semibold" style={{ color: '#B38F24' }}>🎯 Perfect for:</span> {service.perfectFor}
+                  <span className="font-semibold flex justify-center items-center" style={{ color: '#B38F24' }}>🎯 Perfect for:</span> {service.perfectFor}
                 </div>
 
                 {/* Decorative Line */}
@@ -169,7 +170,7 @@ const OurServices = () => {
                     boxShadow: '0 8px 30px rgba(179, 143, 36, 0.3)'
                   }}
                 >
-                  <span>📞 Book Appointment</span>
+                  <Link to ='/book-appointment'> Book Appointment</Link>
                   <ChevronRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>
@@ -189,7 +190,7 @@ const OurServices = () => {
         </div>
 
         {/* Bottom Decorative Pattern */}
-        <div className="mt-16 flex justify-center gap-3 opacity-30">
+        <div className="mt-10 flex justify-center gap-3 opacity-30">
           {[...Array(8)].map((_, i) => (
             <div 
               key={i}

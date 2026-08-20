@@ -84,7 +84,7 @@ const WhyChoose = () => {
             <span className="text-[#B38F24]">SHITAL ARTIST</span>
           </h2>
           
-          <p className="text-[#1F3D2B]/80 text-xs justify-center items-center max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#1F3D2B]/80 text-xs flex justify-center items-center max-w-2xl mx-auto leading-relaxed">
             Your special moments deserve beautiful details.
             <br />
             At Shital Artist, every mehndi design is created with creativity, precision, and personal attention. 
@@ -93,7 +93,7 @@ const WhyChoose = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 flex justify-center items-center lg:grid-cols-3 gap-6 md:gap-8 mb-5">
           {features.map((feature, index) => (
             <div
               key={index}

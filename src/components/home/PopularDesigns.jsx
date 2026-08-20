@@ -74,7 +74,7 @@ const PopularDesigns = () => {
   ];
 
   return (
-    <section className="py-5 md:py-10 bg-gradient-to-l from-[#f0e8d6] via-[#FAF6ED] to-[#FFFFFF]">
+    <section className="py-5 md:py-5 bg-gradient-to-l from-[#f0e8d6] via-[#FAF6ED] to-[#FFFFFF]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -99,7 +99,7 @@ const PopularDesigns = () => {
         </div>
 
         {/* Designs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex justify-center items-center gap-6 md:gap-8 mb-12">
           {designs.map((design, index) => (
             <div
               key={index}

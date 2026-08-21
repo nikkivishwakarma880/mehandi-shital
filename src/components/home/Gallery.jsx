@@ -88,8 +88,8 @@ const Gallery = () => {
   return (
     <section className="py-12 sm:py-20 bg-[#F6F1E4] relative overflow-hidden">
       {/* Decorative Glow Elements */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#315C3A]/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#D4AF37]/10 rounded blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#315C3A]/10 rounded blur-3xl pointer-events-none"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

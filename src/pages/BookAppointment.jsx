@@ -1,9 +1,10 @@
 import React from 'react'
+import BookMehndiAppointment from '../components/bookappointment/BookMehndiAppointment'
 
 const BookAppointment = () => {
   return (
     <div>
-      Book Appointment
+      <BookMehndiAppointment />
     </div>
   )
 }

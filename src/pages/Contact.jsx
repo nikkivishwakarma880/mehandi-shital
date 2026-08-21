@@ -1,9 +1,10 @@
 import React from 'react'
+import GetInTouch from '../components/contact/GetInTouch'
 
 const Contact = () => {
   return (
     <div>
-      contact
+      <GetInTouch />
     </div>
   )
 }

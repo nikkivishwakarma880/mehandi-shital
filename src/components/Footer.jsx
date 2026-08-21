@@ -1,6 +1,5 @@
-// Footer.jsx
 import React from 'react';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Link } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
@@ -18,9 +17,11 @@ const Footer = () => {
     'Traditional Mehndi', 'Party Mehndi', 'Festival Mehndi'
   ];
 
+  // Google Maps Search Link for Location
+  const mapUrl = "https://www.google.com/maps/search/?api=1&query=Gorakhpur,+Uttar+Pradesh,+India";
+
   return (
-    /* Light Background: Left to Right (White -> Soft Cream -> Warm Light Gold) */
-    <footer className="bg-[#1F3D2B] text-[white] border-t border-[#1F3D2B]/10">
+    <footer className="bg-[#1F3D2B] text-white border-t border-[#1F3D2B]/10">
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -35,7 +36,7 @@ const Footer = () => {
                 Bridal & Artistry
               </p>
             </div>
-            <p className="text-[#FFFFFF]/80 text-xs leading-relaxed">
+            <p className="text-white/80 text-xs leading-relaxed">
               Creating timeless mehndi designs that tell your unique love story. 
               Where tradition meets artistry, making every celebration extraordinary.
             </p>
@@ -69,7 +70,7 @@ const Footer = () => {
               {services.map((service) => (
                 <li key={service}>
                   <a 
-                    href="#" 
+                    href="#services" 
                     className="text-[#F5E7CF]/85 text-xs hover:text-[#B38F24] transition-colors duration-300 font-medium"
                   >
                     {service}
@@ -85,21 +86,32 @@ const Footer = () => {
               Contact Us
             </h3>
             <ul className="space-y-3">
+              
+              {/* Google Maps Location Link */}
               <li className="flex items-start gap-2.5">
                 <MapPin size={18} className="text-[#B38F24] mt-0.5 flex-shrink-0" />
-                <span className="text-[#F5E7CF]/85 text-xs font-medium">
+                <a 
+                  href={mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#F5E7CF]/85 text-xs font-medium hover:text-[#B38F24] transition-colors duration-300"
+                >
                   Gorakhpur, Uttar Pradesh, India
-                </span>
+                </a>
               </li>
+
+              {/* Phone Click-to-Call Link */}
               <li className="flex items-center gap-2.5">
                 <Phone size={18} className="text-[#B38F24] flex-shrink-0" />
-                <a 
-                  href="tel:+916393430756" 
+                <Link 
+                  to="tel:+916393430756" 
                   className="text-[#F5E7CF]/85 text-xs font-medium hover:text-[#B38F24] transition-colors duration-300"
                 >
                   +91 6393430756
-                </a>
+                </Link>
               </li>
+
+              {/* Email Link */}
               <li className="flex items-center gap-2.5">
                 <Mail size={18} className="text-[#B38F24] flex-shrink-0" />
                 <a 
@@ -109,12 +121,15 @@ const Footer = () => {
                   shital@mehndigrace.com
                 </a>
               </li>
+
+              {/* Working Hours */}
               <li className="flex items-center gap-2.5">
                 <Clock size={18} className="text-[#B38F24] flex-shrink-0" />
                 <span className="text-[#F5E7CF]/85 text-xs font-medium">
                   Mon – Sun: 10:00 AM – 8:00 PM
                 </span>
               </li>
+
             </ul>
           </div>
         </div>

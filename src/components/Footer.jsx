@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, Link } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
@@ -23,11 +23,11 @@ const Footer = () => {
   return (
     <footer className="bg-[#1F3D2B] text-white border-t border-[#1F3D2B]/10">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-4 md:gap-8 lg:gap-12 items-start">
           
-          {/* Brand Section */}
-          <div className="space-y-4">
+          {/* Column 1: Brand Section */}
+          <div className="space-y-2">
             <div>
               <h3 className="text-[#B38F24] text-xl font-serif font-bold tracking-wider">
                 Shital Artist
@@ -42,31 +42,12 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Column 2: Our Services (Pehle Quick Links tha) */}
           <div>
-            <h3 className="text-[#B38F24] text-sm font-bold mb-4 tracking-wide font-serif">
-              Quick Links
-            </h3>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.path} 
-                    className="text-[#F5E7CF]/85 text-xs hover:text-[#B38F24] transition-colors duration-300 font-medium"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Our Services */}
-          <div>
-            <h3 className="text-[#B38F24] text-sm font-bold mb-4 tracking-wide font-serif">
+            <h3 className="text-[#B38F24] text-sm font-bold mb-2 tracking-wide font-serif">
               Our Services
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-1.5">
               {services.map((service) => (
                 <li key={service}>
                   <a 
@@ -80,16 +61,35 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Us */}
+          {/* Column 3: Quick Links (Pehle Our Services tha) */}
           <div>
-            <h3 className="text-[#B38F24] text-sm font-bold mb-4 tracking-wide font-serif">
+            <h3 className="text-[#B38F24] text-sm font-bold mb-2 tracking-wide font-serif">
+              Quick Links
+            </h3>
+            <ul className="space-y-1.5">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <a 
+                    href={link.path} 
+                    className="text-[#F5E7CF]/85 text-xs hover:text-[#B38F24] transition-colors duration-300 font-medium"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Contact Us */}
+          <div>
+            <h3 className="text-[#B38F24] text-sm font-bold mb-2 tracking-wide font-serif">
               Contact Us
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               
               {/* Google Maps Location Link */}
-              <li className="flex items-start gap-2.5">
-                <MapPin size={18} className="text-[#B38F24] mt-0.5 flex-shrink-0" />
+              <li className="flex items-center gap-2.5">
+                <MapPin size={18} className="text-[#B38F24] flex-shrink-0" />
                 <a 
                   href={mapUrl}
                   target="_blank"
@@ -103,12 +103,12 @@ const Footer = () => {
               {/* Phone Click-to-Call Link */}
               <li className="flex items-center gap-2.5">
                 <Phone size={18} className="text-[#B38F24] flex-shrink-0" />
-                <Link 
-                  to="tel:+916393430756" 
+                <a 
+                  href="tel:+916393430756" 
                   className="text-[#F5E7CF]/85 text-xs font-medium hover:text-[#B38F24] transition-colors duration-300"
                 >
                   +91 6393430756
-                </Link>
+                </a>
               </li>
 
               {/* Email Link */}
@@ -132,6 +132,7 @@ const Footer = () => {
 
             </ul>
           </div>
+
         </div>
       </div>
 

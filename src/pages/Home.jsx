@@ -16,7 +16,7 @@ const Home = () => {
       <FeaturedServices />
       <WhyChoose />
       <PopularDesigns />
-      <Gallery /> 
+      <Gallery/> 
       <Instagram />
       
     </div>

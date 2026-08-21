@@ -210,17 +210,17 @@ const BridalMehndi = () => {
         </div>
       </section>
 
-      {/* 5. BRIDAL GALLERY */}
-      <section className="py-12 px-6 max-w-6xl mx-auto">
+      {/* 5. BRIDAL GALLERY (Updated for mobile 2-column grid) */}
+      <section className="py-12 px-3 sm:px-6 max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-serif font-bold" style={{ color: '#3F5B4A' }}>
             Bridal Gallery
           </h2>
           <p className="mt-2" style={{ color: '#3F5B4A' }}>A glimpse of our recent bridal masterpieces</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
           {galleryImages.map((img, idx) => (
-            <div key={idx} className="group relative overflow-hidden rounded shadow-md h-72">
+            <div key={idx} className="group relative overflow-hidden rounded shadow-md h-48 sm:h-72">
               <img 
                 src={img} 
                 alt={`Bridal Mehndi Design ${idx + 1}`} 
@@ -260,20 +260,28 @@ const BridalMehndi = () => {
         </div>
       </section>
 
-      {/* 7. BOOK YOUR BRIDAL MEHNDI (CTA) */}
-      <section id="contact" className="py-10 px-6 text-center" style={{ backgroundColor: '#f0ece3' }}>
+      {/* 7. BOOK YOUR BRIDAL MEHNDI - CTA (Updated for mobile side-by-side buttons) */}
+      <section id="contact" className="py-10 px-4 sm:px-6 text-center" style={{ backgroundColor: '#f0ece3' }}>
         <div className="max-w-3xl mx-auto space-y-5">
-          <h2 className="text-3xl md:text-4xl font-serif flex justify-center items-center font-bold" style={{ color: '#A07E2F' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif flex justify-center items-center font-bold" style={{ color: '#A07E2F' }}>
             Let's Create Magic For Your Special Day
           </h2>
-          <p className="text-lg leading-relaxed flex justify-center items-center" style={{ color: '#3F5B4A' }}>
+          <p className="text-sm sm:text-lg leading-relaxed flex justify-center items-center" style={{ color: '#3F5B4A' }}>
             Dates book fast during the wedding season. Lock in your slot with Shital Artist and ensure your bridal hands look exceptional.
           </p>
-          <div className="pt-3 flex flex-wrap justify-center gap-4">
-            <Link to='/book-appointment' className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded transition shadow-lg" style={{ backgroundColor: '#A07E2F' }}>
-               Book Appointment
+          <div className="pt-3 flex flex-row justify-center items-center gap-2 sm:gap-4 max-w-md mx-auto">
+            <Link 
+              to='/book-appointment' 
+              className="flex-1 min-w-0 text-center text-white font-semibold text-xs sm:text-base py-3 px-2 sm:px-6 rounded transition shadow-lg whitespace-nowrap overflow-hidden text-ellipsis" 
+              style={{ backgroundColor: '#A07E2F' }}
+            >
+              Book Appointment
             </Link>
-            <a href="#packages" className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded transition shadow-lg" style={{ backgroundColor: '#3F5B4A' }}>
+            <a 
+              href="#packages" 
+              className="flex-1 min-w-0 text-center text-white font-semibold text-xs sm:text-base py-3 px-2 sm:px-6 rounded transition shadow-lg whitespace-nowrap overflow-hidden text-ellipsis" 
+              style={{ backgroundColor: '#3F5B4A' }}
+            >
               View Packages
             </a>
           </div>

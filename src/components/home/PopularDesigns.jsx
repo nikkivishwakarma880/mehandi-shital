@@ -99,13 +99,13 @@ const PopularDesigns = () => {
         </div>
 
         {/* Designs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex justify-center items-center gap-6 md:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
           {designs.map((design, index) => (
             <div
               key={index}
-              className="group relative rounded overflow-hidden bg-white/70 backdrop-blur-md border border-[#1F3D2B]/10 hover:border-[#B38F24]/40 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#B38F24]/10"
+              className="group relative rounded overflow-hidden bg-white/70 backdrop-blur-md border border-[#1F3D2B]/10 hover:border-[#B38F24]/40 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#B38F24]/10 min-h-[300px] flex flex-col"
             >
-              {/* Background Image with Light Overlay - FIXED */}
+              {/* Background Image with Light Overlay */}
               <div 
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 group-hover:scale-100 transition-transform duration-700"
                 style={{ backgroundImage: `url(${design.image})` }}
@@ -118,42 +118,52 @@ const PopularDesigns = () => {
               <div className={`absolute inset-0 bg-gradient-to-br ${design.color} opacity-50`}></div>
               
               {/* Content */}
-              <div className="relative p-6 z-10 min-h-[280px] flex flex-col">
-                {/* Icon */}
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded bg-[#1F3D2B]/10 backdrop-blur-sm text-[#507a61] mb-4 group-hover:bg-[#1F3D2B] group-hover:text-[#FFF8E7] transition-all duration-300 border border-[#1F3D2B]/15">
-                  <design.icon size={24} />
+              <div className="relative p-6 z-10 flex flex-col flex-1">
+                {/* Icon - Top Left */}
+                <div className="flex justify-start">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded bg-[#1F3D2B]/10 backdrop-blur-sm text-[#507a61] group-hover:bg-[#1F3D2B] group-hover:text-[#FFF8E7] transition-all duration-300 border border-[#1F3D2B]/15">
+                    <design.icon size={24} />
+                  </div>
                 </div>
-                
-                {/* Title */}
-                <h3 className="text-[#1F3D2B] text-xl font-serif font-bold mb-2 group-hover:text-[#B38F24] transition-colors duration-300">
-                  {design.title}
-                </h3>
-                
-                {/* Description */}
-                <p className="text-[#B38F24] text-sm font-semibold mb-2">
-                  {design.description}
-                </p>
-                
-                {/* Details */}
-                <p className="text-[#1F3D2B]/80 text-xs leading-relaxed mb-3 flex-grow">
-                  {design.details}
-                </p>
-                
-                {/* Perfect For Tags */}
-                <div className="flex flex-wrap gap-1.5 mt-auto">
-                  {design.perfectFor.map((item, idx) => (
-                    <span 
-                      key={idx}
-                      className="inline-flex items-center gap-1 bg-[#1F3D2B]/5 px-2.5 py-1 rounded border border-[#1F3D2B]/10 text-[#1F3D2B]/80 text-[10px] font-medium"
-                    >
-                      <Heart size={10} className="text-[#B38F24]" />
-                      {item}
-                    </span>
-                  ))}
+
+                {/* Spacer to push content to bottom */}
+                <div className="flex-1"></div>
+
+                {/* Content - Centered at Bottom */}
+                <div className="text-center">
+                  {/* Title */}
+                  <h3 className="text-[#1F3D2B] text-xl font-serif font-bold mb-1 group-hover:text-[#B38F24] transition-colors duration-300">
+                    {design.title}
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-[#B38F24] text-sm font-semibold mb-1">
+                    {design.description}
+                  </p>
+                  
+                  {/* Details */}
+                  <p className="text-[#1F3D2B]/80 text-xs leading-relaxed mb-2">
+                    {design.details}
+                  </p>
+                  
+                  {/* Perfect For Tags */}
+                  <div className="flex flex-wrap gap-1.5 justify-center mb-2">
+                    {design.perfectFor.map((item, idx) => (
+                      <span 
+                        key={idx}
+                        className="inline-flex items-center gap-1 bg-[#1F3D2B]/5 px-2.5 py-1 rounded border border-[#1F3D2B]/10 text-[#1F3D2B]/80 text-[10px] font-medium"
+                      >
+                        <Heart size={10} className="text-[#B38F24]" />
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Bottom decorative line - thinner */}
+                  <div className="relative">
+                    <div className="mx-auto w-0 group-hover:w-1/3 h-[1px] bg-[#B38F24] transition-all duration-500 rounded-full"></div>
+                  </div>
                 </div>
-                
-                {/* Bottom decorative line */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 group-hover:w-1/2 h-0.5 bg-[#B38F24] transition-all duration-500"></div>
               </div>
             </div>
           ))}

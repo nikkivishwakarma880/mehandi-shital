@@ -112,7 +112,7 @@ const SectionHeading = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-start gap-3">
+            <div className="flex flex-row sm:flex-row items-start gap-2">
 
               <button className="group inline-flex items-center gap-2 border-2
                border-[#1F3D2B]/20 text-[#1F3D2B] px-6 py-2.5 rounded 
@@ -127,7 +127,7 @@ const SectionHeading = () => {
               </button>
 
               <Link to ='/book-appointment' className="group inline-flex items-center gap-2 bg-[#3f5b4a] text-[#FFF8E7] px-5 py-2.5 rounded font-bold text-xs hover:bg-[#315C3A] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg">
-                Book an Appointment
+                Book an Appointment 
                 <Sparkles
                   size={16}
                   className="group-hover:rotate-45 transition-transform duration-300 text-[#B38F24]"

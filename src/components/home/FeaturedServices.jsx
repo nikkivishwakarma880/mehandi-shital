@@ -21,7 +21,6 @@ const FeaturedServices = () => {
       title: 'Bridal Mehndi',
       subtitle: 'Your Love Story, Beautifully Designed',
       description: 'Intricate and personalized bridal mehndi crafted to make your wedding day truly unforgettable.',
-      // buttonText: 'Explore Bridal Mehndi',
       image: 'https://i.pinimg.com/736x/bf/79/b9/bf79b9729b21fe68ad4b454815625e50.jpg',
     },
     {
@@ -30,7 +29,6 @@ const FeaturedServices = () => {
       title: 'Arabic Mehndi',
       subtitle: 'Elegant. Flowing. Timeless.',
       description: 'Graceful floral patterns, delicate trails, and modern Arabic-inspired designs perfect for a sophisticated look.',
-      // buttonText: 'View Designs',
       image: 'https://i.pinimg.com/1200x/0b/f2/5e/0bf25eba359cddd03dae70b97db09287.jpg',
     },
     {
@@ -39,7 +37,6 @@ const FeaturedServices = () => {
       title: 'Engagement Mehndi',
       subtitle: 'A Beautiful Beginning',
       description: 'Elegant mehndi designs created specially for engagement ceremonies and pre-wedding celebrations.',
-      // buttonText: 'Discover More',
       image: 'https://i.pinimg.com/736x/f3/60/10/f36010f7ec9c674643025c9b1584e134.jpg',
     },
     {
@@ -48,7 +45,6 @@ const FeaturedServices = () => {
       title: 'Party Mehndi',
       subtitle: 'Celebrate in Style',
       description: 'Beautiful and trendy designs for birthdays, festivals, family functions, and special gatherings.',
-      // buttonText: 'Book Now',
       image: 'https://i.pinimg.com/736x/7b/2e/55/7b2e552038276f22e4176ef51916f551.jpg',
     },
     {
@@ -57,7 +53,6 @@ const FeaturedServices = () => {
       title: 'Traditional Mehndi',
       subtitle: 'Inspired by Timeless Art',
       description: 'Classic Indian patterns featuring traditional motifs and detailed designs that celebrate the beauty of our heritage.',
-      // buttonText: 'View Designs',
       image: 'https://i.pinimg.com/736x/45/50/bb/4550bb7d49e38dddc820071a6918f978.jpg',
     },
     {
@@ -66,18 +61,16 @@ const FeaturedServices = () => {
       title: 'Customized Mehndi',
       subtitle: 'Designed Just for You',
       description: 'Have a special idea in mind? We create personalized mehndi designs based on your preferences, outfit, occasion, and story.',
-      // buttonText: 'Create Your Design',
       image: 'https://i.pinimg.com/736x/e9/e6/d3/e9e6d3a499ea705c68fad26f3da14d5c.jpg',
     },
   ];
 
   return (
-    /* Light Background: Left to Right (White -> Soft Cream -> Warm Light Gold) */
     <section className="py-8 md:py-10 bg-gradient-to-r from-[#FFFFFF] via-[#FAF6ED] to-[#F5EFE0]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className=" max-w-3xl text-center mx-auto md:mb-3">
+        <div className="max-w-3xl text-center mx-auto md:mb-3">
           <div className="inline-flex gap-2 bg-[#1F3D2B]/5 backdrop-blur-sm px-4 py-2 rounded border border-[#1F3D2B]/15 mb-4">
             <Sparkles size={16} className="text-[#B38F24]" />
             <span className="text-[#1F3D2B] text-xs font-semibold tracking-[0.2em] uppercase">
@@ -85,16 +78,16 @@ const FeaturedServices = () => {
             </span>
             <Sparkles size={16} className="text-[#B38F24]" />
           </div>       
-          
+        
           <h2 className="text-[#1F3D2B] text-3xl sm:text-4xl md:text-4xl font-serif font-bold mb-4">
             OUR <span className="text-[#B38F24]">FEATURED SERVICES</span>
           </h2>
-          
+        
           <p className="text-[#B38F24] text-base sm:text-lg font-medium mb-4">
             Beautiful Mehndi for Every Special Occasion
           </p>
-          
-          <p className="text-[#1F3D2B]/80 text-sm sm:text-sm  mb-14  flex leading-relaxed">
+        
+          <p className="text-[#1F3D2B]/80 text-sm sm:text-sm mb-14 leading-relaxed">
             From intricate bridal designs to elegant Arabic patterns our mehndi artistry is thoughtfully created to complement your style, celebration, and special moments.
           </p>
         </div>
@@ -104,7 +97,7 @@ const FeaturedServices = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="group relative rounded overflow-hidden bg-[#1F3D2B] border border-[#1F3D2B]/15 hover:border-[#B38F24]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#B38F24]/10 min-h-[320px] flex flex-col justify-between"
+              className="group relative rounded overflow-hidden bg-[#1F3D2B] border border-[#1F3D2B]/15 hover:border-[#B38F24]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#B38F24]/10 min-h-[340px] flex flex-col"
             >
               {/* Background Image */}
               <div 
@@ -118,14 +111,20 @@ const FeaturedServices = () => {
               {/* Bottom Gradient for Text Readability */}
               <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#1F3D2B]/90 via-[#1F3D2B]/40 to-transparent z-0"></div>
 
-              {/* Content */}
-              <div className="relative z-10 p-6 md:p-8 flex flex-col justify-between h-full">
-                <div>
-                  {/* Icon */}
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded bg-[#B38F24]/20 border border-[#B38F24]/30 mb-4 group-hover:bg-[#B38F24]/40 transition-colors duration-300 backdrop-blur-sm">
+              {/* Content - Icon Top Left, Rest Centered at Bottom */}
+              <div className="relative z-10 p-6 md:p-8 flex flex-col flex-1">
+                {/* Icon - Top Left */}
+                <div className="flex justify-start">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded bg-[#B38F24]/20 border border-[#B38F24]/30 group-hover:bg-[#B38F24]/40 transition-colors duration-300 backdrop-blur-sm">
                     <service.icon size={28} className="text-[#FFF8E7]" />
                   </div>
+                </div>
 
+                {/* Spacer to push content to bottom */}
+                <div className="flex-1"></div>
+
+                {/* Content - Centered at Bottom */}
+                <div className="text-center">
                   {/* Title */}
                   <h3 className="text-[#FFF8E7] text-xl font-bold mb-1 drop-shadow-md">
                     {service.title}
@@ -140,13 +139,12 @@ const FeaturedServices = () => {
                   <p className="text-[#FFF8E7]/95 text-sm leading-relaxed mb-5 drop-shadow-md">
                     {service.description}
                   </p>
-                </div>
 
-                {/* Button */} 
-                <button className="group/btn inline-flex items-center gap-2 text-[#F3E5AB] text-sm font-semibold hover:text-[#FFFFFF] transition-colors duration-300 w-fit drop-shadow-md">
-                  {service.buttonText}
-                  {/* <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform duration-300" /> */}
-                </button>
+                  {/* Button */}
+                  <button className="group/btn inline-flex items-center gap-2 text-[#F3E5AB] text-sm font-semibold hover:text-[#FFFFFF] transition-colors duration-300 w-fit drop-shadow-md mx-auto">
+                    {service.buttonText}
+                  </button>
+                </div>
               </div>
             </div>
           ))}
@@ -155,7 +153,6 @@ const FeaturedServices = () => {
         {/* Bottom CTA Section */}
         <div className="mt-16 md:mt-18">
           <div className="relative bg-gradient-to-r from-[#1F3D2B]/5 via-[#1F3D2B]/10 to-[#1F3D2B]/5 backdrop-blur-sm rounded p-8 md:p-6 text-center border border-[#1F3D2B]/15 overflow-hidden shadow-sm">
-            {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-[#B38F24]/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#B38F24]/10 rounded-full blur-3xl"></div>
             
@@ -170,7 +167,7 @@ const FeaturedServices = () => {
               
               <Link to='/book-appointment' className="group inline-flex mt-4 text-xs items-center gap-1.5 
               bg-[#3f5b4a] text-[#FFF8E7] px-5 py-2.5 rounded font-bold
-               hover:bg-[#477150] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg">
+              hover:bg-[#477150] transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg">
                 Book Your Appointment
                 <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform duration-300 text-[#B38F24]" />
               </Link>

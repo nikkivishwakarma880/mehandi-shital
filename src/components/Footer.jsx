@@ -4,8 +4,13 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
-    'Home', 'About Us', 'Services', 
-    'Bridal Mehndi', 'Gallery', 'Packages', 'Contact Us'
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Bridal Mehndi', path: '/bridal-mehndi' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Packages', path: '/packages' },
+    { name: 'Contact Us', path: '/contact' }
   ];
 
   const services = [
@@ -43,12 +48,12 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
-                <li key={link}>
+                <li key={link.name}>
                   <a 
-                    href="#" 
+                    href={link.path} 
                     className="text-[#F5E7CF]/85 text-xs hover:text-[#B38F24] transition-colors duration-300 font-medium"
                   >
-                    {link}
+                    {link.name}
                   </a>
                 </li>
               ))}
@@ -88,15 +93,21 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone size={18} className="text-[#B38F24] flex-shrink-0" />
-                <span className="text-[#F5E7CF]/85 text-xs font-medium">
+                <a 
+                  href="tel:+916393430756" 
+                  className="text-[#F5E7CF]/85 text-xs font-medium hover:text-[#B38F24] transition-colors duration-300"
+                >
                   +91 6393430756
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail size={18} className="text-[#B38F24] flex-shrink-0" />
-                <span className="text-[#F5E7CF]/85 text-xs font-medium">
+                <a 
+                  href="mailto:shital@mehndigrace.com" 
+                  className="text-[#F5E7CF]/85 text-xs font-medium hover:text-[#B38F24] transition-colors duration-300"
+                >
                   shital@mehndigrace.com
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Clock size={18} className="text-[#B38F24] flex-shrink-0" />

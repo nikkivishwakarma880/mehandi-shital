@@ -1,6 +1,5 @@
 // WhyChoose.jsx
 import React from 'react';
-// import artist1 from '../../assets/artist1.png'
 import artist1 from '../../assets/artist1.png'
 import artist2 from '../../assets/artist2.png'
 import artist3 from '../../assets/artist3.png'
@@ -93,34 +92,40 @@ const WhyChoose = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 flex justify-center items-center lg:grid-cols-3 gap-6 md:gap-8 mb-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-5">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative rounded overflow-hidden bg-[#FFFDF9] border border-[#1F3D2B]/10 hover:border-[#B38F24]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1F3D2B]/10 min-h-[260px] flex flex-col justify-between"
+              className="group relative rounded overflow-hidden bg-[#FFFDF9] border border-[#1F3D2B]/10 hover:border-[#B38F24]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1F3D2B]/10 min-h-[280px] flex flex-col"
             >
               {/* Background Image: Visible by default & enhances on Hover */}
-             <div 
-  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35 group-hover:opacity-85 scale-100 group-hover:scale-110 transition-all duration-700 ease-out z-0"
-  style={{ backgroundImage: `url(${feature.bgImage})` }}
-></div>
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35 group-hover:opacity-85 scale-100 group-hover:scale-110 transition-all duration-700 ease-out z-0"
+                style={{ backgroundImage: `url(${feature.bgImage})` }}
+              ></div>
 
               {/* Halka Soft Green Radial Overlay (#1F3D2B/60) - Expands from center on Hover */}
               <span className="absolute inset-0 m-auto w-1 h-1 bg-[#1F3D2B]/60 rounded scale-0 group-hover:scale-[350] transition-transform duration-700 ease-out pointer-events-none z-0"></span>
 
+              {/* Decorative Number - Top Right */}
+              <div className="absolute top-4 right-4 text-4xl font-serif font-bold text-[#1F3D2B]/30 group-hover:text-[#F3E5AB]/40 transition-colors duration-500 z-10">
+                {feature.number}
+              </div>
+
               {/* Card Content */}
-              <div className="relative p-6 z-10 h-full flex flex-col justify-between">
-                <div>
-                  {/* Decorative Number */}
-                  <div className="absolute top-4 right-4 text-4xl font-serif font-bold text-[#1F3D2B]/30 group-hover:text-[#F3E5AB]/40 transition-colors duration-500">
-                    {feature.number}
-                  </div>
-                  
-                  {/* Icon Container */}
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded bg-[#1F3D2B]/10 text-[#1F3D2B] mb-4 group-hover:bg-[#B38F24] group-hover:text-[#FFF8E7] transition-all duration-500 border border-[#1F3D2B]/15 group-hover:border-[#B38F24]">
+              <div className="relative p-6 z-10 flex flex-col flex-1">
+                {/* Icon - Top Left */}
+                <div className="flex justify-start">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded bg-[#1F3D2B]/10 text-[#1F3D2B] group-hover:bg-[#B38F24] group-hover:text-[#FFF8E7] transition-all duration-500 border border-[#1F3D2B]/15 group-hover:border-[#B38F24]">
                     <feature.icon size={24} />
                   </div>
-                  
+                </div>
+
+                {/* Spacer to push content to bottom */}
+                <div className="flex-1"></div>
+
+                {/* Content - Centered at Bottom */}
+                <div className="text-center">
                   {/* Title */}
                   <h3 className="text-[#1F3D2B] text-lg font-serif font-bold mb-2 group-hover:text-[#FFF8E7] transition-colors duration-500 drop-shadow-md">
                     {feature.title}
@@ -130,11 +135,11 @@ const WhyChoose = () => {
                   <p className="text-[#1F3D2B] font-medium text-sm leading-relaxed group-hover:text-[#FFF8E7]/95 transition-colors duration-500 drop-shadow-md">
                     {feature.description}
                   </p>
-                </div>
 
-                {/* Bottom Decorative Line Center Shrink Target */}
-                <div className="relative mt-4">
-                  <div className="mx-auto w-0 group-hover:w-1/2 h-0.5 bg-[#B38F24] transition-all duration-500 rounded-full"></div>
+                  {/* Bottom Decorative Line - Center Shrink Target */}
+                  <div className="relative mt-4">
+                    <div className="mx-auto w-0 group-hover:w-1/2 h-0.5 bg-[#B38F24] transition-all duration-500 rounded-full"></div>
+                  </div>
                 </div>
               </div>
             </div>

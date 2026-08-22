@@ -6,120 +6,120 @@ const OurMehndiGallery = () => {
   const [activeCategory, setActiveCategory] = useState('All');
 
   // Sample Gallery Data - Added 4 more images (total 16)
-  const galleryItems = [
-    {
-      id: 1,
-      title: "Royal Bridal Motifs",
-      category: "Bridal Mehndi",
-      image: "https://i.pinimg.com/originals/c7/18/09/c7180929120b50e7a674cb7b84065760.jpg?nii=t",
-      desc: "Detailed bride-groom figures & heritage artwork."
-    },
-    {
-      id: 2,
-      title: "Flowing Arabic Floral",
-      category: "Arabic Mehndi",
-      image: "https://i.pinimg.com/474x/e2/c1/fe/e2c1fe4162a5570e3350b0f17e85e746.jpg",
-      desc: "Bold lines with elegant floral flow."
-    },
-    {
-      id: 3,
-      title: "Delicate Minimal Mandala",
-      category: "Minimal Mehndi",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
-      desc: "Clean, modern, and subtle center mandala."
-    },
-    {
-      id: 4,
-      title: "Classic Indian Peacock",
-      category: "Traditional Mehndi",
-      image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
-      desc: "Timeless traditional intricate detailing."
-    },
-    {
-      id: 5,
-      title: "Full-Arm Bridal Story",
-      category: "Bridal Mehndi",
-      image: "https://i.pinimg.com/originals/ab/cb/15/abcb15b9ea740b80bc3542e1e9a8ac60.png?nii=t",
-      desc: "Customized wedding ritual elements."
-    },
-    {
-      id: 6,
-      title: "Contemporary Arabic Vane",
-      category: "Arabic Mehndi",
-      image: "https://i.pinimg.com/originals/1c/d4/0a/1cd40a9dc9079675395e33d444d725c4.jpg?nii=t",
-      desc: "Spacious and chic modern vine work."
-    },
-    {
-      id: 7,
-      title: "Bridal Hand Elegance",
-      category: "Bridal Mehndi",
-      image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
-      desc: "Elegant bridal hand patterns with traditional motifs."
-    },
-    {
-      id: 8,
-      title: "Arabic Floral Cuff",
-      category: "Arabic Mehndi",
-      image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
-      desc: "Beautiful floral cuff designs with Arabic influence."
-    },
-    {
-      id: 9,
-      title: "Minimal Finger Art",
-      category: "Minimal Mehndi",
-      image: "https://i.pinimg.com/originals/60/1d/b4/601db4ae62c469e8cedb54488c73e034.jpg",
-      desc: "Simple yet elegant finger mehndi designs."
-    },
-    {
-      id: 10,
-      title: "Traditional Bridal Set",
-      category: "Traditional Mehndi",
-      image: "https://images.unsplash.com/photo-1595039838779-f3780873afd5?q=80&w=600&auto=format&fit=crop",
-      desc: "Complete traditional bridal mehndi set."
-    },
-    {
-      id: 11,
-      title: "Modern Arabic Fusion",
-      category: "Arabic Mehndi",
-      image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
-      desc: "Fusion of modern and traditional Arabic styles."
-    },
-    {
-      id: 12,
-      title: "Royal Wedding Collection",
-      category: "Bridal Mehndi",
-      image: "https://i.pinimg.com/474x/1d/51/3f/1d513f4a2cd7867eea65620b5a66432c.jpg?nii=t",
-      desc: "Royal collection for the perfect wedding day."
-    },
-    {
-      id: 13,
-      title: "Elegant Peacock Motif",
-      category: "Traditional Mehndi",
-      image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
-      desc: "Beautiful peacock motifs with intricate detailing."
-    },
-    {
-      id: 14,
-      title: "Minimal Wrist Art",
-      category: "Minimal Mehndi",
-      image: "https://i.pinimg.com/originals/b1/3d/47/b13d47eb26c0334cd5abf2286641e9b1.jpg",
-      desc: "Delicate wrist mehndi for everyday elegance."
-    },
-    {
-      id: 15,
-      title: "Bridal Feet Mehndi",
-      category: "Bridal Mehndi",
-      image: "https://i.pinimg.com/736x/c1/7b/cd/c17bcdca53b7ea5c2d52a8335404c546.jpg",
-      desc: "Traditional bridal feet mehndi patterns."
-    },
-    {
-      id: 16,
-      title: "Arabic Vine Symphony",
-      category: "Arabic Mehndi",
-      image: "https://i.pinimg.com/originals/d2/e1/33/d2e133568707b67ac1abc41a66450fc0.jpg",
-      desc: "Beautiful flowing vine patterns in Arabic style."
-    }
-  ];
+ const galleryItems = [
+  {
+    id: 1,
+    title: "Royal Bridal Motifs",
+    category: "Bridal Mehndi",
+    image: "https://i.pinimg.com/originals/c7/18/09/c7180929120b50e7a674cb7b84065760.jpg",
+    desc: "Detailed bride-groom figures & heritage artwork."
+  },
+  {
+    id: 2,
+    title: "Flowing Arabic Floral",
+    category: "Arabic Mehndi",
+    image: "https://i.pinimg.com/474x/60/45/d2/6045d2c88057abeb017de989b8787cf3.jpg",
+    desc: "Bold lines with elegant floral flow."
+  },
+  {
+    id: 3,
+    title: "Delicate Minimal Mandala",
+    category: "Minimal Mehndi",
+    image: "https://i.pinimg.com/736x/20/6e/81/206e8110d9f05fd20be7a1a4669ec758.jpg",
+    desc: "Clean, modern, and subtle center mandala."
+  },
+  {
+    id: 4,
+    title: "Classic Indian Peacock",
+    category: "Traditional Mehndi",
+    image: "https://i.pinimg.com/736x/8f/b7/40/8fb740c0583ecf7f2bc21c68b7a38f44.jpg",
+    desc: "Timeless traditional intricate detailing."
+  },
+  {
+    id: 5,
+    title: "Full-Arm Bridal Story",
+    category: "Traditional Mehndi",
+    image: "https://i.pinimg.com/originals/1c/d4/0a/1cd40a9dc9079675395e33d444d725c4.jpg",
+    desc: "Customized wedding ritual elements."
+  },
+  {
+    id: 6,
+    title: "Contemporary Arabic Vine",
+    category: "Arabic Mehndi",
+    image: "https://i.pinimg.com/originals/d2/e1/33/d2e133568707b67ac1abc41a66450fc0.jpg",
+    desc: "Spacious and chic modern vine work."
+  },
+  {
+    id: 7,
+    title: "Bridal Hand Elegance",
+    category: "Bridal Mehndi",
+    image: "https://i.pinimg.com/474x/1d/51/3f/1d513f4a2cd7867eea65620b5a66432c.jpg",
+    desc: "Elegant bridal hand patterns with traditional motifs."
+  },
+  {
+    id: 8,
+    title: "Arabic Floral Cuff",
+    category: "Arabic Mehndi",
+    image: "https://i.pinimg.com/originals/b1/3d/47/b13d47eb26c0334cd5abf2286641e9b1.jpg",
+    desc: "Beautiful floral cuff designs with Arabic influence."
+  },
+  {
+    id: 9,
+    title: "Minimal Finger Art",
+    category: "Minimal Mehndi",
+    image: "https://i.pinimg.com/originals/60/1d/b4/601db4ae62c469e8cedb54488c73e034.jpg",
+    desc: "Simple yet elegant finger mehndi designs."
+  },
+  {
+    id: 10,
+    title: "Traditional Bridal Set",
+    category: "Traditional Mehndi",
+    image: "https://i.pinimg.com/736x/c1/7b/cd/c17bcdca53b7ea5c2d52a8335404c546.jpg",
+    desc: "Complete traditional bridal mehndi set."
+  },
+  {
+    id: 11,
+    title: "Modern Arabic Fusion",
+    category: "Arabic Mehndi",
+    image: "https://i.pinimg.com/736x/12/95/98/12959888289ceabc63d3b543f7513cff.jpg",
+    desc: "Fusion of modern and traditional Arabic styles."
+  },
+  {
+    id: 12,
+    title: "Royal Wedding Collection",
+    category: "Bridal Mehndi",
+    image: "https://i.pinimg.com/474x/e2/c1/fe/e2c1fe4162a5570e3350b0f17e85e746.jpg",
+    desc: "Royal collection for the perfect wedding day."
+  },
+  {
+    id: 13,
+    title: "Elegant Peacock Motif",
+    category: "Traditional Mehndi",
+    image: "https://i.pinimg.com/originals/ab/cb/15/abcb15b9ea740b80bc3542e1e9a8ac60.png",
+    desc: "Beautiful peacock motifs with intricate detailing."
+  },
+  {
+    id: 14,
+    title: "Minimal Wrist Art",
+    category: "Minimal Mehndi",
+    image: "https://i.pinimg.com/originals/2c/c5/ec/2cc5ecfe90462064a59a1d611ba2f893.jpg?nii=t",
+    desc: "Delicate wrist mehndi for everyday elegance."
+  },
+  {
+    id: 15,
+    title: "Bridal Feet Mehndi",
+    category: "Bridal Mehndi",
+    image: "https://i.pinimg.com/736x/64/08/ac/6408ac0dcb7dd6b4d09b756138314d05.jpg",
+    desc: "Traditional bridal feet mehndi patterns."
+  },
+  {
+    id: 16,
+    title: "Arabic Vine Symphony",
+    category: "Arabic Mehndi",
+    image: "https://i.pinimg.com/736x/4b/74/44/4b744412fa8b35fadc76aa6a3f0ce563.jpg",
+    desc: "Beautiful flowing vine patterns in Arabic style."
+  }
+];
 
   const categories = [
     { name: "Bridal Mehndi", desc: "Intricate and elegant bridal designs created to make your wedding moments truly unforgettable." },
@@ -193,7 +193,7 @@ const OurMehndiGallery = () => {
                   backgroundColor: activeCategory === cat.name ? '#FAF7F2' : '#FFFFFF', 
                   borderColor: '#A07E2F55',
                   ringColor: '#A07E2F',
-                  borderRadius: '12px'
+                  borderRadius: '5px'
                 }}
               >
                 <div>
@@ -204,8 +204,8 @@ const OurMehndiGallery = () => {
                     {cat.desc}
                   </p>
                 </div>
-                <div className="mt-6 flex items-center text-xs font-semibold uppercase tracking-wider" style={{ color: '#A07E2F' }}>
-                  View Collection <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                <div className="mt-8 flex items-center text-xs font-semibold uppercase tracking-wider" style={{ color: '#A07E2F' }}>
+                  {/* View Collection <ArrowRight className="w-3.5 h-3.5 ml-1" /> */}
                 </div>
               </div>
             ))}
@@ -225,7 +225,7 @@ const OurMehndiGallery = () => {
                 backgroundColor: activeCategory === 'All' ? '#A07E2F' : 'transparent',
                 borderColor: '#A07E2F',
                 color: activeCategory === 'All' ? '#FFFFFF' : '#3F5B4A',
-                borderRadius: '12px'
+                borderRadius: '4px'
               }}
             >
               All Designs
@@ -235,13 +235,13 @@ const OurMehndiGallery = () => {
                 key={idx}
                 onClick={() => setActiveCategory(cat.name)}
                 className={`px-5 py-2 text-sm font-medium transition-all ${
-                  activeCategory === cat.name ? 'text-white shadow-md' : 'border'
+                  activeCategory === cat.name ? 'text-white shadow' : 'border'
                 }`}
                 style={{ 
                   backgroundColor: activeCategory === cat.name ? '#A07E2F' : 'transparent',
                   borderColor: '#A07E2F',
                   color: activeCategory === cat.name ? '#FFFFFF' : '#3F5B4A',
-                  borderRadius: '12px'
+                  borderRadius: '5px'
                 }}
               >
                 {cat.name}
@@ -249,41 +249,39 @@ const OurMehndiGallery = () => {
             ))}
           </div>
 
-          {/* Image Grid - 4 Cards in One Line with 16 Images */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {filteredGallery.map((item) => (
-              <div 
-                key={item.id} 
-                className="bg-white overflow-hidden border shadow-sm hover:shadow-xl transition-all duration-300 group"
-                style={{ borderColor: '#e0dcd2', borderRadius: '12px' }}
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <span className="absolute top-3 left-3 text-xs font-semibold px-3 py-1 text-white shadow" style={{ backgroundColor: '#3F5B4A', borderRadius: '12px' }}>
-                    {item.category}
-                  </span>
-                </div>
-                <div className="p-4">
-                  <h4 className="font-serif font-bold text-lg mb-1" style={{ color: '#3F5B4A' }}>
-                    {item.title}
-                  </h4>
-                  <p className="text-xs" style={{ color: '#A07E2F' }}>
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+         {/* Image Grid - Mobile me 2 cards, Small screens me 2, Large screens me 4 */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+  {filteredGallery.map((item) => (
+    <div 
+      key={item.id} 
+      className="bg-white overflow-hidden border shadow-sm hover:shadow-xl transition-all duration-300 group"
+      style={{ borderColor: '#e0dcd2', borderRadius: '6px' }}
+    >
+      <div className="relative h-48 sm:h-64 overflow-hidden">
+        <img 
+          src={item.image} 
+          alt={item.title} 
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+      <div className="p-3 sm:p-4">
+        <h4 className="font-serif font-bold text-sm sm:text-lg mb-1" style={{ color: '#3F5B4A' }}>
+          {item.title}
+        </h4>
+        <p className="text-[10px] sm:text-xs" style={{ color: '#A07E2F' }}>
+          {item.desc}
+        </p>
+      </div>
+    </div>
+  ))}
+         </div>
+
         </section>
 
         {/* 4. CREATIVITY & LOVE FEATURE SECTION */}
-        <section className="py-12 px-6 max-w-5xl mx-auto my-6 rounded border text-center shadow-sm" style={{ backgroundColor: '#FAF7F2', borderColor: '#A07E2F33', borderRadius: '12px' }}>
+        <section className="py-12 px-6 max-w-5xl mx-auto my-6 rounded border text-center shadow-sm" style={{ backgroundColor: '#FAF7F2', borderColor: '#A07E2F33', borderRadius: '4px' }}>
           <Heart className="w-10 h-10 mx-auto mb-4" style={{ color: '#A07E2F' }} />
-          <h2 className="text-3xl font-serif font-bold mb-4" style={{ color: '#3F5B4A' }}>
+          <h2 className="text-3xl font-serif font-bold mb-2" style={{ color: '#3F5B4A' }}>
             Made With Creativity & Love
           </h2>
           <p className="text-base md:text-lg leading-relaxed max-w-3xl mx-auto font-medium" style={{ color: '#A07E2F' }}>
@@ -303,10 +301,11 @@ const OurMehndiGallery = () => {
             <div className="pt-3 flex flex-wrap justify-center gap-4">
               <Link 
                 to="/book-appointment" 
-                className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 transition-all shadow-lg hover:opacity-90" 
-                style={{ backgroundColor: '#A07E2F', borderRadius: '12px' }}
+                className="inline-flex items-center gap-2 text-xs text-white font-semibold px-5 py-3 transition-all shadow-lg hover:opacity-90" 
+                style={{ backgroundColor: '#A07E2F', borderRadius: '5px' }}
               >
-                <Calendar className="w-5 h-5" /> Book Your Mehndi Appointment
+                {/* <Calendar className="w-5 h-5" /> */}
+                 Book Your Mehndi Appointment
               </Link>
             </div>
           </div>

@@ -114,8 +114,8 @@ const BridalMehndi = () => {
             <img 
               src="https://i.pinimg.com/736x/31/91/60/319160fa8092d0a0eb82fcfad1986302.jpg" 
               alt="Bridal Mehndi Art" 
-              className="rounded shadow-xl border-2 object-cover w-full max-w-md h-[420px]"
-              style={{ borderColor: '#A07E2F33', borderRadius: '20px' }}
+              className="rounded shadow-xl border object-cover w-full max-w-md h-[420px]"
+              style={{ borderColor: '#A07E2F33', borderRadius: '5px' }}
             />
           </div>
         </div>

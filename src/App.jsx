@@ -10,6 +10,7 @@ import Contact from './pages/Contact'
 import BookAppointment from './pages/BookAppointment'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
+import ScrollToTop from './components/ScrollToTop'
 
 const App = () => {
 
@@ -32,7 +33,7 @@ const App = () => {
     <div>
 
       <Navbar />
-
+        <ScrollToTop/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />

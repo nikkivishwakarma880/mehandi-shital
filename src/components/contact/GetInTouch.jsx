@@ -67,8 +67,8 @@ const GetInTouch = () => {
     <div className="font-sans min-h-screen" style={{ backgroundColor: '#f5f2eb', color: '#3F5B4A' }}>
       
       {/* 1. HERO / HEADER SECTION */}
-      <section className="py-12 px-4 sm:px-6 text-center" style={{ background: 'linear-gradient(to bottom, #FAF7F2, #F5F2EB)' }}>
-        <div className="max-w-4xl mx-auto space-y-3">
+      <section className="py-12 px-4 sm:px-6 text-center" style={{ background: 'linear-gradient(to bottom, rgb(250, 247, 242), #F5F2EB)' }}>
+        <div className="max-w-4xl  mx-auto space-y-3">
           <span className="font-semibold uppercase tracking-widest text-xs" style={{ color: '#A07E2F' }}>
             Get In Touch
           </span>
@@ -95,7 +95,7 @@ const GetInTouch = () => {
             </h2>
 
             {/* Visit Us */}
-            <div className="bg-white p-6 rounded border shadow-sm flex items-start gap-4 transition hover:shadow-md" style={{ borderColor: '#e0dcd2' }}>
+            <div className="bg-white p-6 rounded-md border shadow-sm flex items-start gap-4 transition hover:shadow-md" style={{ borderColor: '#e0dcd2' }}>
               <div className="p-3 rounded shrink-0" style={{ backgroundColor: '#f0ece3' }}>
                 <MapPin className="w-6 h-6" style={{ color: '#A07E2F' }} />
               </div>
@@ -296,7 +296,7 @@ const GetInTouch = () => {
               className="bg-white p-6 rounded border shadow-sm flex flex-col items-start transition hover:-translate-y-1 hover:shadow-md"
               style={{ borderColor: '#e0dcd2' }}
             >
-              <div className="p-3 rounded mb-3" style={{ backgroundColor: '#f0ece3' }}>
+              <div className="p-3 rounded mb-2" style={{ backgroundColor: '#f0ece3' }}>
                 {item.icon}
               </div>
               <h3 className="font-serif font-bold text-lg mb-1" style={{ color: '#3F5B4A' }}>{item.title}</h3>

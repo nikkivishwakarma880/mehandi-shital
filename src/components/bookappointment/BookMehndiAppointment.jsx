@@ -61,38 +61,36 @@ const BookMehndiAppointment = () => {
     <div className="font-sans min-h-screen bg-[#FAF7F2] text-[#315C3A]">
       
       {/* 1. HERO / HEADER SECTION */}
-      <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#F5F0E6] via-[#FAF7F2] to-[#FAF7F2] overflow-hidden border-b border-[#D4AF37]/20">
-        {/* Glow Effects */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-[#D4AF37]/10 rounded blur-3xl pointer-events-none"></div>
-        
-        <div className="max-w-4xl mx-auto text-center relative z-10 space-y-4">
-          <span className="inline-flex items-center gap-1.5 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase bg-[#315C3A]/10 border border-[#D4AF37]/30 px-4 py-1.5 rounded">
-            <Sparkles className="w-4 h-4 text-[#D4AF37]" /> Book Your Mehndi Appointment
-          </span>
+    {/* 1. HERO / HEADER SECTION */}
+<section 
+  className="relative py-16 sm:py-16 px-4 sm:px-6 lg:px-5 overflow-hidden border-b border-[#D4AF37]/20 bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: "url('https://i.pinimg.com/736x/60/d3/7e/60d37ec978be5bfd0e1493edb7fbecb6.jpg')" }}
+>
+  {/* Light Overlay for text readability + Blur effect */}
+  <div className="absolute inset-0 bg-[#FAF7F2]/60 backdrop-blur-sm pointer-events-none"></div>
 
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold text-[#315C3A] leading-tight sm:leading-tight">
-            Your Special Day Deserves <br className="hidden sm:inline" />
-            <span className="text-[#A07E2F] italic font-normal">Beautiful Mehndi</span>
-          </h1>
+  {/* Glow Effects */}
+  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-[#D4AF37]/10 rounded blur-3xl pointer-events-none"></div>
+  
+  <div className="max-w-4xl mx-auto text-center relative z-10 space-y-4">
+    <span className="inline-flex items-center gap-1.5 text-[#9c832e] text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase bg-[#315C3A]/10 border border-[#D4AF37]/30 px-4 py-1.5 rounded">
+      <Sparkles className="w-4 h-4 text-[#866d1a]" /> Book Your Mehndi Appointment
+    </span>
 
-          <p className="text-sm sm:text-lg text-[#315C3A]/85 max-w-2xl mx-auto leading-relaxed pt-2">
-            Your wedding and celebrations are made of moments you'll remember forever — let your Mehndi be one of the most beautiful parts of them. ✨
-          </p>
+    <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold text-[#315C3A] leading-tight sm:leading-tight">
+      Your Special Day Deserves <br className="hidden sm:inline" />
+      <span className="text-[#A07E2F] italic font-normal">Beautiful Mehndi</span>
+    </h1>
 
-          <p className="text-xs sm:text-sm text-[#8C6D23] max-w-xl mx-auto font-medium leading-relaxed">
-            Whether you're looking for elegant bridal Mehndi, traditional patterns, modern Arabic designs, or Mehndi for a special celebration, Shital Artist is here to create a design that feels uniquely yours.
-          </p>
+    <p className="text-sm sm:text-lg text-[#315C3A]/85 max-w-2xl mx-auto leading-relaxed pt-2">
+      Your wedding and celebrations are made of moments you'll remember forever — let your Mehndi  beautiful parts of them. ✨
+    </p>
 
-          <div className="pt-4 flex flex-wrap justify-center items-center gap-4">
-            <button
-              onClick={scrollToForm}
-              className="px-8 py-3.5 bg-[#A07E2F] hover:bg-[#8C6D23] text-white font-semibold text-sm rounded shadow-lg transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5"
-            >
-              Check Availability <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      </section>
+    <p className="text-xs sm:text-sm text-[#8C6D23] max-w-xl mx-auto font-medium leading-relaxed">
+      Whether you're looking for elegant bridal Mehndi, traditional patterns, modern Arabic designs, or Mehndi yours.
+    </p>
+  </div>
+</section>
 
       {/* 2. SERVICES HIGHLIGHT SECTION */}
       <section className="py-14 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">

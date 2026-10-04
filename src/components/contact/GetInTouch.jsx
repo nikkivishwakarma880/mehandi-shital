@@ -67,22 +67,34 @@ const GetInTouch = () => {
     <div className="font-sans min-h-screen" style={{ backgroundColor: '#f5f2eb', color: '#3F5B4A' }}>
       
       {/* 1. HERO / HEADER SECTION */}
-      <section className="py-12 px-4 sm:px-6 text-center" style={{ background: 'linear-gradient(to bottom, rgb(250, 247, 242), #F5F2EB)' }}>
-        <div className="max-w-4xl  mx-auto space-y-3">
-          <span className="font-semibold uppercase tracking-widest text-xs" style={{ color: '#A07E2F' }}>
-            Get In Touch
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-4xl font-serif font-bold leading-tight" style={{ color: '#3F5B4A' }}>
-            Let’s Create Beautiful Mehndi Memories Together
-          </h1>
-          <p className="text-sm sm:text-base max-w-1xl mx-auto leading-relaxed mt-2" style={{ color: '#526E5D' }}>
-            Whether it’s your wedding day, a special celebration, or simply a love for beautiful Mehndi designs, Shital Artist is here to make your occasion even more memorable.
-          </p>
-          <p className="text-xs sm:text-sm font-medium" style={{ color: '#A07E2F' }}>
-            Have a design in mind or need help choosing the perfect Mehndi style? Get in touch with us and let’s discuss your requirements.
-          </p>
-        </div>
-      </section>
+      
+<section 
+  className="relative py-16 px-4 sm:px-6 text-center bg-cover bg-center bg-no-repeat overflow-hidden"
+  style={{ 
+    backgroundImage: "url('https://i.pinimg.com/736x/60/d3/7e/60d37ec978be5bfd0e1493edb7fbecb6.jpg')" 
+  }}
+>
+  {/* Light Overlay for readability + slight blur */}
+  <div className="absolute inset-0 bg-[#FAF7F2]/65 backdrop-blur-sm pointer-events-none"></div>
+
+  <div className="max-w-4xl mx-auto space-y-3 relative z-10">
+    <span className="font-semibold uppercase tracking-widest text-xs" style={{ color: '#A07E2F' }}>
+      Get In Touch
+    </span>
+
+    <h1 className="text-3xl sm:text-4xl md:text-4xl font-serif font-bold leading-tight" style={{ color: '#3F5B4A' }}>
+      Let’s Create Beautiful Mehndi Memories Together
+    </h1>
+
+    <p className="text-sm sm:text-base max-w-1xl mx-auto leading-relaxed mt-2" style={{ color: '#526E5D' }}>
+      Whether it’s your wedding day, a special celebration, or simply a love for beautiful Mehndi designs, Shital Artist is here to make your occasion even more memorable.
+    </p>
+
+    <p className="text-xs sm:text-sm font-medium" style={{ color: '#A07E2F' }}>
+      Have a design in mind or need help choosing the perfect Mehndi style? Get in touch with us and let’s discuss your requirements.
+    </p>
+  </div>
+</section>
 
       {/* 2. MAIN CONTENT GRID (Contact Info + Form) */}
       <section className="py-8 px-4 sm:px-6 max-w-6xl mx-auto">

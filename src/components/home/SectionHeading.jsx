@@ -44,33 +44,33 @@ const SectionHeading = () => {
          {/* Image & Content Side by Side */}
         <div className="flex flex-col md:flex-row items-stretch gap-12 md:gap-16">
 
-          {/* Left Side - Image */}
-          <div className="flex-1 flex justify-center md:justify-start">
-            <div className="relative w-full max-w-sm md:max-w-md">
+         {/* Left Side - Image */}
+<div className="flex-1 flex justify-center md:justify-start">
+  <div className="relative w-full max-w-sm md:max-w-md">
 
-              <div className="relative rounded overflow-hidden shadow-xl shadow-[#B38F24]/10 border border-[#1F3D2B]/15">
-                <img
-                  src= {artist}
-                  alt="Shital - Mehndi Artist"
-                  className="w-full h-90 object-cover hover:scale-105 transition-transform duration-600"
-                />
+    <div className="relative rounded overflow-hidden shadow-xl shadow-[#B38F24]/10 border border-[#1F3D2B]/15 aspect-[4/5]">
+      <img
+        src={artist}
+        alt="Shital - Mehndi Artist"
+        className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+      />
 
-                {/* Decorative overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#3f5b4a]/20 via-transparent to-transparent"></div>
-              </div>
+      {/* Decorative overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#3f5b4a]/20 via-transparent to-transparent"></div>
+    </div>
 
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-[#B38F24]/40 rounded-tl"></div>
+    {/* Decorative elements */}
+    <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-[#B38F24]/40 rounded-tl"></div>
 
-              <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-[#B38F24]/40 rounded-br"></div>
+    <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-[#B38F24]/40 rounded-br"></div>
 
-              {/* Floating badge */}
-              <div className="absolute -bottom-2 -right-2 bg-[#3f5b4a] text-[#FFF8E7] px-4 py-2 rounded text-xs font-bold shadow-lg">
-                5+ Years Experience
-              </div>
+    {/* Floating badge */}
+    <div className="absolute -bottom-2 -right-2 bg-[#3f5b4a] text-[#FFF8E7] px-4 py-2 rounded text-xs font-bold shadow-lg">
+      5+ Years Experience
+    </div>
 
-            </div>
-          </div>
+  </div>
+</div>
 
           {/* Right Side - Content */}
           <div className="flex-1 max-w-2xl flex flex-col justify-between">

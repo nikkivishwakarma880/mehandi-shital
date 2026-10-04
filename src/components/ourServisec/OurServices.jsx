@@ -43,7 +43,7 @@ const OurServices = () => {
   ];
 
   return (
-    <section className="relative py-20 px-4 overflow-hidden" style={{ backgroundColor: '#F1E9D8' }}>
+    <section className="relative overflow-hidden" style={{ backgroundColor: '#F1E9D8' }}>
       {/* Background Gradient Overlay - Left to Right */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#ede5d3] via-[#efece7] to-[#edebe7] opacity-80" />
       
@@ -56,23 +56,31 @@ const OurServices = () => {
 
       <div className="relative max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-16 space-y-4">
-          <p className="text-sm uppercase tracking-[0.3em] font-medium" style={{ color: '#B38F24' }}>
-            ✨ Our Services
-          </p>
-          <h2 className="text-4xl md:text-5xl lg:text-4xl font-bold leading-tight" style={{ color: '#315C3A' }}>
-            Mehndi Designs for
-            <span className="block mt-2" style={{ color: '#B38F24' }}>Every Special Occasion</span>
-          </h2>
-          <div className="w-24 h-1 mx-auto rounded" style={{ backgroundColor: '#B38F24' }} />
-          <p className="max-w-2xl mx-auto text-sm leading-relaxed mt-6" style={{ color: '#315C3A' }}>
-            From minimal elegance to grand celebrations — we create art that tells your story.
-            Every design is created with patience, creativity, and attention to detail.
-          </p>
-        </div>
+       <div 
+  className="relative text-center mb-16 rounded bg-cover bg-center bg-no-repeat overflow-hidden"
+  style={{ backgroundImage: "url('https://i.pinimg.com/736x/60/d3/7e/60d37ec978be5bfd0e1493edb7fbecb6.jpg')" }}
+>
+  {/* Blur Overlay */}
+  <div className="absolute inset-0 bg-white/50 backdrop-blur-md pointer-events-none"></div>
+
+  <div className="relative z-10 space-y-4 py-16 px-6">
+    <p className="text-sm uppercase tracking-[0.3em] font-medium" style={{ color: '#B38F24' }}>
+      ✨ Our Services
+    </p>
+    <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight" style={{ color: '#315C3A' }}>
+      Mehndi Designs for
+      <span className="block mt-2" style={{ color: '#B38F24' }}>Every Special Occasion</span>
+    </h2>
+    <div className="w-24 h-1 mx-auto rounded" style={{ backgroundColor: '#B38F24' }} />
+    <p className="max-w-2xl mx-auto text-sm leading-relaxed mt-3" style={{ color: '#315C3A' }}>
+      From minimal elegance to grand celebrations — we create art that tells your story.
+      Every design is created with patience, creativity, and attention to detail.
+    </p>
+  </div>
+</div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6">
           {services.map((service) => (
             <div
               key={service.id}

@@ -9,18 +9,26 @@ const bgMehndiImage = shital2; // Main Card Background
 
 const Introduction = () => {
   return (
-    <section className="py-16 px-4 bg-gradient-to-b from-amber-50/50 to-white">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-4xl font-serif font-bold mb-3 tracking-wide" style={{ color: "#315C3A" }}>
-           <span className="text-[#B99239]">Meet Shital –</span><br /> The Artist Behind Every Beautiful Design
-          </h2>
-          <div className="w-24 h-1 bg-[#B99239] mx-auto my-4 rounded"></div>
-          <p className="text-lg md:text-sm text-[#B99239] max-w-3xl mx-auto italic font-light">
-            "Creating elegant mehndi designs that celebrate traditions, emotions, and unforgettable moments."
-          </p>
-        </div>
+   <section className=" bg-transparent">
+  <div className="max-w-6xl mx-auto">
+    {/* Header */}
+   <div 
+  className="relative text-center mb-14 py-8  rounded bg-cover bg-center bg-no-repeat overflow-hidden"
+  style={{ backgroundImage: "url('https://i.pinimg.com/736x/60/d3/7e/60d37ec978be5bfd0e1493edb7fbecb6.jpg')" }}
+>
+  {/* Blur Overlay */}
+  <div className="absolute inset-0 bg-white/70 backdrop-blur-md pointer-events-none"></div>
+
+  <div className="relative z-10">
+    <h2 className="text-5xl md:text-6xl font-serif font-bold mb-3 tracking-wide" style={{ color: "#315C3A" }}>
+      <span className="text-[#B99239]">Meet Shital –</span><br /> The Artist Behind Every Beautiful Design
+    </h2>
+    <div className="w-24 h-1 bg-[#B99239] mx-auto my-4 rounded"></div>
+    <p className="text-lg md:text-sm text-[#785f27] max-w-3xl mx-auto italic font-light">
+      "Creating elegant mehndi designs that celebrate traditions, emotions, and unforgettable moments."
+    </p>
+  </div>
+</div>
 
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">

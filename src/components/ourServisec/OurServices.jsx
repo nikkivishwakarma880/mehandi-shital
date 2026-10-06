@@ -9,7 +9,7 @@ const OurServices = () => {
       icon: <Sparkles className="w-8 h-8" />,
       title: "Minimal Mehndi",
       subtitle: "Simple • Elegant • Modern",
-      description: "For clients who love clean, subtle, and sophisticated designs. Minimal floral patterns, geometric accents, and fine line work.",
+      description: "For clients who love clean, subtle, and sophisticated designs. Minimal floral patterns, geometric accents,fine line work.",
       perfectFor: "Daily wear, office events, or minimal bridal touch.",
       gradient: "from-amber-50/50 to-rose-50/50"
     },
@@ -25,8 +25,8 @@ const OurServices = () => {
     {
       id: 3,
       icon: <Palette className="w-8 h-8" />,
-      title: "Customized Mehndi Designs",
-      subtitle: "Personalized • Unique • Client-centric",
+      title: "Customized Mehndi",
+      subtitle: "Personalized • Unique •",
       description: "Designs tailored to your outfit, occasion, and personality. Custom initials, hidden symbols, theme-based art.",
       perfectFor: "Tell us your vision — we bring it to life on your hands!",
       gradient: "from-orange-50/50 to-amber-50/50"
@@ -35,8 +35,8 @@ const OurServices = () => {
       id: 4,
       icon: <Star className="w-8 h-8" />,
       title: "Bridal Family Mehndi",
-      subtitle: "Complete • Coordinated • Memorable",
-      description: "For the bride and her entire squad — matching or complementary designs. Heavy bridal set with coordinated patterns for family.",
+      subtitle: "Complete • Coordinated •",
+      description: "For the bride and her entire squad — Heavy bridal set with coordinated patterns for family.",
       perfectFor: "Mother, sisters, cousins, and special guests.",
       gradient: "from-blue-50/50 to-indigo-50/50"
     }
@@ -57,7 +57,7 @@ const OurServices = () => {
       <div className="relative max-w-7xl mx-auto">
         {/* Header Section */}
        <div 
-  className="relative text-center mb-16 rounded bg-cover bg-center bg-no-repeat overflow-hidden"
+  className="relative text-center mb-10 rounded bg-cover bg-center bg-no-repeat overflow-hidden"
   style={{ backgroundImage: "url('https://i.pinimg.com/736x/60/d3/7e/60d37ec978be5bfd0e1493edb7fbecb6.jpg')" }}
 >
   {/* Blur Overlay */}
@@ -67,12 +67,12 @@ const OurServices = () => {
     <p className="text-sm uppercase tracking-[0.3em] font-medium" style={{ color: '#B38F24' }}>
       ✨ Our Services
     </p>
-    <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight" style={{ color: '#315C3A' }}>
+    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" style={{ color: '#315C3A' }}>
       Mehndi Designs for
       <span className="block mt-2" style={{ color: '#B38F24' }}>Every Special Occasion</span>
     </h2>
     <div className="w-24 h-1 mx-auto rounded" style={{ backgroundColor: '#B38F24' }} />
-    <p className="max-w-2xl mx-auto text-sm leading-relaxed mt-3" style={{ color: '#315C3A' }}>
+    <p className="max-w-2xl mx-auto text-sm leading-relaxed mt-5" style={{ color: '#315C3A' }}>
       From minimal elegance to grand celebrations — we create art that tells your story.
       Every design is created with patience, creativity, and attention to detail.
     </p>
@@ -80,11 +80,11 @@ const OurServices = () => {
 </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4">
           {services.map((service) => (
             <div
               key={service.id}
-              className="group relative bg-white/80 backdrop-blur-sm rounded p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl border border-white/50"
+              className="group relative bg-white/80 backdrop-blur-sm rounded p-2 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl border border-white/50"
               style={{
                 boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
               }}
@@ -93,10 +93,10 @@ const OurServices = () => {
               <div className={`absolute inset-0 rounded bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
               
               {/* Card Content */}
-              <div className="relative z-10">
+              <div className="relative z-10 p-3">
                 {/* Icon Circle */}
                 <div 
-                  className="w-16 h-16 rounded flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
+                  className="w-10 h-10 rounded flex items-center justify-center mb-3 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
                   style={{ 
                     backgroundColor: '#F1E9D8',
                     color: '#B38F24'
@@ -106,21 +106,21 @@ const OurServices = () => {
                 </div>
 
                 <h3 
-                  className="text-xl font-bold mb-1 transition-colors duration-300"
+                  className="text-xl font-bold mb-2 transition-colors duration-300"
                   style={{ color: '#315C3A' }}
                 >
                   {service.title}
                 </h3>
                 
                 <p 
-                  className="text-sm font-medium mb-3"
+                  className="text-sm font-medium mb-2"
                   style={{ color: '#B38F24' }}
                 >
                   {service.subtitle}
                 </p>
 
                 <p 
-                  className="text-sm leading-relaxed transition-colors duration-300"
+                  className="text-xs leading-relaxed mt-1 mb-2 transition-colors duration-300"
                   style={{ color: '#315C3A' }}
                 >
                   {service.description}
@@ -128,7 +128,7 @@ const OurServices = () => {
 
                 Perfect For
                 <div 
-                  className="mt-4 p-3 rounded flex justify-center items-center bg-white/60 text-xs"
+                  className="mt-2 p-2 rounded flex justify-center items-center bg-white/60 text-xs"
                   style={{ color: '#315C3A' }}
                 >
                   <span className="font-semibold flex justify-center items-center" style={{ color: '#B38F24' }}>🎯 Perfect for:</span> {service.perfectFor}
@@ -136,7 +136,7 @@ const OurServices = () => {
 
                 {/* Decorative Line */}
                 <div 
-                  className="mt-4 w-12 h-0.5 rounded transition-all duration-300 group-hover:w-20"
+                  className="mt-2 w-12 h-0.5 rounded transition-all duration-300 group-hover:w-20"
                   style={{ backgroundColor: '#B38F24' }}
                 />
               </div>
@@ -148,12 +148,12 @@ const OurServices = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="mt-20 text-center">
+        <div className="mt-10 text-center">
           <div className="relative inline-block">
             {/* Decorative Background */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#B38F24]/10 to-[#315C3A]/10 rounded blur-2xl" />
             
-            <div className="relative bg-white/90 backdrop-blur-sm rounded px-8 py-12 md:px-16 md:py-14 border border-white/50 shadow-xl" 
+            <div className="relative bg-white/90 backdrop-blur-sm rounded px-12 py-12 md:px-20 md:py-12 border border-white/50 shadow-xl" 
                  style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.08)' }}>
               <h3 
                 className="text-3xl md:text-4xl font-bold mb-4"
@@ -183,7 +183,7 @@ const OurServices = () => {
                 </button>
               </div>
 
-              <div className="mt-6 text-sm" style={{ color: '#315C3A' }}>
+              <div className="mt-5 text-sm" style={{ color: '#315C3A' }}>
                 <p>📸 Instagram: <strong style={{ color: '#B38F24' }}>@yourmehndiart</strong> &nbsp;|&nbsp; 📧 <strong style={{ color: '#B38F24' }}>info@yourmehndi.com</strong></p>
                 <p className="mt-2 italic text-sm" style={{ color: '#B38F24' }}>
                   “Har occasion ke liye perfect mehndi — bas aapki ek call door!”
@@ -198,7 +198,7 @@ const OurServices = () => {
         </div>
 
         {/* Bottom Decorative Pattern */}
-        <div className="mt-10 flex justify-center gap-3 opacity-30">
+        <div className="mt-6 flex justify-center gap-2 mb-6 opacity-30">
           {[...Array(8)].map((_, i) => (
             <div 
               key={i}

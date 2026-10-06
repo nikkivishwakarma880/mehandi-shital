@@ -187,7 +187,8 @@ const MehndiDesigns = () => {
               fontSize: '2.8rem',
               fontWeight: '700',
               letterSpacing: '1px',
-              marginBottom: '0.5rem',
+              marginBottom: '0.1rem',
+              
             }}
           >
             ✿ Exclusive Henna Services ✿

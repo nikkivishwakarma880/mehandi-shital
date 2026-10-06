@@ -13,7 +13,7 @@ const Introduction = () => {
   <div className="max-w-6xl mx-auto">
     {/* Header */}
    <div 
-  className="relative text-center mb-14 py-8  rounded bg-cover bg-center bg-no-repeat overflow-hidden"
+  className="relative text-center mb-5 py-6 rounded bg-cover bg-center bg-no-repeat overflow-hidden"
   style={{ backgroundImage: "url('https://i.pinimg.com/736x/60/d3/7e/60d37ec978be5bfd0e1493edb7fbecb6.jpg')" }}
 >
   {/* Blur Overlay */}
@@ -34,18 +34,18 @@ const Introduction = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
           {/* Text Content */}
           <div className="lg:col-span-3 space-y-6">
-            <p className="text-stone-700 text-base md:text-sm leading-relaxed">
+            <p className="text-stone-700 text-base pl-6 md:text-sm leading-relaxed">
               At <span className="font-semibold text-lg text-[#b8891d]">Shital Artist</span>, we believe mehndi is more than just an art—it's a beautiful expression of love, culture, and celebration. Based in Gorakhpur, Shital specializes in creating elegant and customized mehndi designs that perfectly complement every occasion.
             </p>
-            <p className="text-stone-700 text-base md:text-sm leading-relaxed">
+            <p className="text-stone-700 text-base md:text-sm pl-5 leading-relaxed">
               Whether it's a grand bridal ceremony, engagement, Karwa Chauth, Teej, Eid, or a family celebration, every design is crafted with precision, creativity, and attention to detail. From intricate traditional patterns to modern Arabic and contemporary styles, each artwork is tailored to reflect your unique personality.
             </p>
-            <p className="text-stone-700 text-base md:text-sm leading-relaxed">
+            <p className="text-stone-700 pl-6 text-base md:text-sm leading-relaxed">
               With a commitment to quality, hygiene, and client satisfaction, Shital ensures every client enjoys a comfortable experience and leaves with stunning mehndi that creates lasting memories.
             </p>
 
             {/* Highlight Points */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pl-6 pt-4">
               <div className="relative flex items-center gap-3 bg-white p-7 rounded shadow-sm border border-amber-400">
                 <Heart className="w-7 h-7 text-[#B99239] flex-shrink-0" />
                 <span className="font-medium text-[#315C3A]">Bridal & Customized Mehndi</span>
@@ -107,7 +107,7 @@ const Introduction = () => {
         </div>
 
         {/* Bottom decorative line */}
-        <div className="mt-16 flex justify-center items-center gap-3">
+        <div className="mt-3 mb-3 flex justify-center items-center gap-3">
           <div className="h-px w-12 bg-amber-300"></div>
           <span className="text-amber-500 text-sm tracking-widest">✦ ✦ ✦</span>
           <div className="h-px w-12 bg-amber-300"></div>

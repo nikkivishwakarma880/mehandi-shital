@@ -3,15 +3,15 @@ import { FaLeaf, FaPalette, FaCrown, FaStar, FaInstagram, FaWhatsapp, FaFacebook
 
 const AboutUs = () => {
   return (
-    <div className="bg-[#F5EFE0] text-[#315C3A] py-16 px-6 md:px-12 font-sans min-h-screen">
-      <div className="max-w-5xl mx-auto space-y-12">
+    <div className="bg-[#F5EFE0] text-[#315C3A] py-5 px-6 md:px-6 font-sans min-h-screen">
+      <div className="max-w-6xl mx-auto space-y-5">
         
         {/* Header / Intro Section */}
-        <div className="bg-white/90 backdrop-blur-sm rounded p-8 md:p-12 text-center shadow-md border border-[#B99239]/30">
+        <div className="bg-white/90 backdrop-blur-sm rounded p-8 md:p-10 text-center shadow-md border border-[#B99239]/30">
           <div className="flex justify-center mb-2 text-[#315C3A] text-3xl">
             <FaLeaf />
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-[#315C3A] tracking-tight mb-4 font-serif">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[#315C3A] tracking-tight mb-3 font-serif">
             Shital the Artist
           </h1>
           <p className="text-[#B99239] text-sm max-w-2xl mx-auto leading-relaxed">
@@ -20,7 +20,7 @@ const AboutUs = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           
           {/* My Journey Card */}
           <div className="bg-white rounded p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#B99239]/20 relative overflow-hidden group">

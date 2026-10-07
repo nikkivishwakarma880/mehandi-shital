@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const OurMehndiGallery = () => {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [selectedImage, setSelectedImage] = useState(null);
 
   // Sample Gallery Data - Added 4 more images (total 16)
  const galleryItems = [
@@ -254,8 +255,9 @@ const OurMehndiGallery = () => {
   {filteredGallery.map((item) => (
     <div 
       key={item.id} 
-      className="bg-white overflow-hidden border shadow-sm hover:shadow-xl transition-all duration-300 group"
+      className="bg-white overflow-hidden border shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
       style={{ borderColor: '#e0dcd2', borderRadius: '6px' }}
+      onClick={() => setSelectedImage(item.image)}
     >
       <div className="relative h-48 sm:h-64 overflow-hidden">
         <img 
@@ -311,6 +313,54 @@ const OurMehndiGallery = () => {
           </div>
         </section>
       </div>
+
+      {/* Full View Modal */}
+      {selectedImage && (
+        <div
+          onClick={() => setSelectedImage(null)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.85)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999,
+            padding: '2rem',
+            cursor: 'zoom-out'
+          }}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            style={{
+              position: 'absolute',
+              top: '1.5rem',
+              right: '1.5rem',
+              color: '#A07E2F',
+              fontSize: '2.5rem',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              lineHeight: 1,
+              background: 'transparent',
+              border: 'none'
+            }}
+          >
+            ×
+          </button>
+          <img
+            src={selectedImage}
+            alt="Full View"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: '90vw',
+              maxHeight: '90vh',
+              objectFit: 'contain',
+              borderRadius: '0.5rem',
+              boxShadow: '0 0 40px rgba(160, 126, 47, 0.6)'
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };

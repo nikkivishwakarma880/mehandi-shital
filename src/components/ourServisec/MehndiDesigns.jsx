@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   FaHandSparkles,
   FaCrown,
@@ -70,6 +70,8 @@ const mehndiDesignsData = [
 ];
 
 const MehndiDesigns = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <div
       style={{
@@ -81,32 +83,33 @@ const MehndiDesigns = () => {
     >
       {/* Dynamic Hover Effect Style */}
       <style>{`
-        .card-container {
-          position: relative;
+        .card-wrapper {
+          display: flex;
+          flex-direction: column;
+          border-radius: 0.375rem;
           overflow: hidden;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          background-color: #FFFFFF;
+          cursor: pointer;
+        }
+
+        .card-wrapper:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+          position: relative;
+          height: 250px;
+          overflow: hidden;
           background-size: cover !important;
           background-position: center !important;
           background-repeat: no-repeat !important;
-          border-radius: 0.375rem !important;
         }
 
-        /* Hover Overlay - Transparent */
-        .card-overlay {
-          position: absolute;
-          inset: 0;
-          background-color: transparent !important;
-          transition: background-color 0.4s ease;
-          z-index: 1;
-        }
-
-        .card-container:hover .card-overlay {
-          background-color: transparent !important;
-        }
-
-        /* Green gradient layers sliding from left & right - Slightly richer & chatak green */
-        .card-container::before,
-        .card-container::after {
+        .card-image::before,
+        .card-image::after {
           content: '';
           position: absolute;
           top: 0;
@@ -114,56 +117,101 @@ const MehndiDesigns = () => {
           width: 50%;
           background: linear-gradient(
             90deg,
-            rgba(34, 84, 45, 0.05) 0%,
-            rgba(34, 84, 45, 0.22) 50%,
-            rgba(34, 84, 45, 0.35) 100%
+            rgba(49, 92, 58, 0.05) 0%,
+            rgba(49, 92, 58, 0.22) 50%,
+            rgba(49, 92, 58, 0.35) 100%
           );
           transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
           z-index: 2;
           pointer-events: none;
         }
 
-        /* Left Side */
-        .card-container::before {
+        .card-image::before {
           left: 0;
           transform: translateX(-101%);
         }
 
-        /* Right Side */
-        .card-container::after {
+        .card-image::after {
           right: 0;
           transform: translateX(101%);
           background: linear-gradient(
             270deg,
-            rgba(34, 84, 45, 0.05) 0%,
-            rgba(34, 84, 45, 0.22) 50%,
-            rgba(34, 84, 45, 0.35) 100%
+            rgba(49, 92, 58, 0.05) 0%,
+            rgba(49, 92, 58, 0.22) 50%,
+            rgba(49, 92, 58, 0.35) 100%
           );
         }
 
-        /* Slide both sides inward on hover */
-        .card-container:hover::before {
+        .card-wrapper:hover .card-image::before {
           transform: translateX(0);
         }
-        .card-container:hover::after {
+        .card-wrapper:hover .card-image::after {
           transform: translateX(0);
         }
 
-        .card-container:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 12px 25px rgba(34, 84, 45, 0.3);
+        .card-content {
+          background-color: #FFFFFF;
+          padding: 0.6rem 0.75rem 0.8rem 0.75rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          flex: 1;
         }
 
-        /* Icon Animation: Only visible on Hover */
         .hover-icon-wrapper {
           opacity: 0;
           transform: scale(0.6);
           transition: opacity 0.3s ease, transform 0.3s ease;
+          font-size: 2rem;
+          color: #B38F24;
+          width: 55px;
+          height: 55px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin-bottom: 0.4rem;
+          filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));
         }
 
-        .card-container:hover .hover-icon-wrapper {
+        .card-wrapper:hover .hover-icon-wrapper {
           opacity: 1;
           transform: scale(1);
+        }
+
+        /* Modal */
+        .modal-overlay {
+          position: fixed;
+          inset: 0;
+          background-color: rgba(0, 0, 0, 0.85);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+          padding: 2rem;
+          cursor: zoom-out;
+        }
+
+        .modal-image {
+          max-width: 90vw;
+          max-height: 90vh;
+          object-fit: contain;
+          border-radius: 0.5rem;
+          box-shadow: 0 0 40px rgba(179, 143, 36, 0.6);
+        }
+
+        .modal-close {
+          position: absolute;
+          top: 1.5rem;
+          right: 1.5rem;
+          color: #B38F24;
+          font-size: 2.5rem;
+          font-weight: bold;
+          cursor: pointer;
+          line-height: 1;
+          background: transparent;
+          border: none;
         }
 
         @media (max-width: 1024px) {
@@ -173,7 +221,7 @@ const MehndiDesigns = () => {
         }
         @media (max-width: 600px) {
           .card-grid {
-            grid-template-columns: 1fr !important;
+            grid-template-columns: repeat(2, 1fr) !important;
           }
         }
       `}</style>
@@ -188,7 +236,6 @@ const MehndiDesigns = () => {
               fontWeight: '700',
               letterSpacing: '1px',
               marginBottom: '0.1rem',
-              
             }}
           >
             ✿ Exclusive Henna Services ✿
@@ -220,89 +267,48 @@ const MehndiDesigns = () => {
           {mehndiDesignsData.map((design) => (
             <div
               key={design.id}
-              className="card-container"
-              style={{
-                borderRadius: '0.375rem',
-                height: '350px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: 'center',
-                backgroundImage: `url(${design.bgImage})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-              }}
+              className="card-wrapper"
+              onClick={() => setSelectedImage(design.bgImage)}
             >
-              <div className="card-overlay" />
-
-              {/* Card Content Centered with GOLD COLOR */}
+              {/* Image section */}
               <div
+                className="card-image"
                 style={{
-                  position: 'relative',
-                  zIndex: 3,
-                  padding: '1.5rem',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  height: '100%',
-                  width: '100%',
-                  boxSizing: 'border-box',
+                  backgroundImage: `url(${design.bgImage})`,
                 }}
-              >
+              />
+
+              {/* Content section below image */}
+              <div className="card-content">
                 {/* Gold Icon */}
-                <div
-                  className="hover-icon-wrapper"
-                  style={{
-                    fontSize: '2.2rem',
-                    color: '#B38F24',
-                    backgroundColor: 'transparent',
-                    width: '60px',
-                    height: '60px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: '50%',
-                    marginBottom: '0.75rem',
-                    filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.6))',
-                  }}
-                >
+                <div className="hover-icon-wrapper">
                   {design.icon}
                 </div>
 
-                {/* Gold Title */}
+                {/* Green Title */}
                 <h3
                   style={{
-                    color: '#B38F24',
-                    fontSize: '1.25rem',
+                    color: '#315C3A',
+                    fontSize: '1.1rem',
                     fontWeight: '700',
-                    margin: '0 0 0.5rem 0',
+                    margin: '0 0 0.3rem 0',
                     textAlign: 'center',
-                    backgroundColor: 'transparent',
-                    padding: '0',
-                    display: 'inline-block',
                     lineHeight: '1.3',
-                    textShadow: '0px 2px 4px rgba(0, 0, 0, 0.8)',
                   }}
                 >
                   {design.title}
                 </h3>
 
-                {/* Gold Description */}
+                {/* Green Description */}
                 <p
                   style={{
-                    color: '#D4AF37',
-                    fontSize: '0.88rem',
-                    lineHeight: '1.5',
+                    color: '#315C3A',
+                    fontSize: '0.8rem',
+                    lineHeight: '1.4',
                     margin: '0',
                     textAlign: 'center',
                     fontWeight: '600',
-                    backgroundColor: 'transparent',
-                    padding: '0',
                     maxWidth: '92%',
-                    textShadow: '0px 2px 4px rgba(0, 0, 0, 0.9)',
                   }}
                 >
                   {design.description}
@@ -312,6 +318,27 @@ const MehndiDesigns = () => {
           ))}
         </div>
       </div>
+
+      {/* Full View Modal */}
+      {selectedImage && (
+        <div
+          className="modal-overlay"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            className="modal-close"
+            onClick={() => setSelectedImage(null)}
+          >
+            ×
+          </button>
+          <img
+            src={selectedImage}
+            alt="Full View"
+            className="modal-image"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 };

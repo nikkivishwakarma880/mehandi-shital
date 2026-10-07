@@ -61,40 +61,36 @@ const BookMehndiAppointment = () => {
     <div className="font-sans min-h-screen bg-[#FAF7F2] text-[#315C3A]">
       
       {/* 1. HERO / HEADER SECTION */}
-    {/* 1. HERO / HEADER SECTION */}
-<section 
-  className="relative py-16 sm:py-16 px-4 sm:px-6 lg:px-5 overflow-hidden border-b border-[#D4AF37]/20 bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: "url('https://i.pinimg.com/736x/60/d3/7e/60d37ec978be5bfd0e1493edb7fbecb6.jpg')" }}
->
-  {/* Light Overlay for text readability + Blur effect */}
-  <div className="absolute inset-0 bg-[#FAF7F2]/60 backdrop-blur-sm pointer-events-none"></div>
+      <section 
+        className="relative py-12 sm:py-14 px-4 sm:px-6 lg:px-5 overflow-hidden border-b border-[#D4AF37]/20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('https://i.pinimg.com/736x/60/d3/7e/60d37ec978be5bfd0e1493edb7fbecb6.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-[#FAF7F2]/60 backdrop-blur-sm pointer-events-none"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-[#D4AF37]/10 rounded blur-3xl pointer-events-none"></div>
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10 space-y-4">
+          <span className="inline-flex items-center gap-1.5 text-[#9c832e] text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase bg-[#315C3A]/10 border border-[#D4AF37]/30 px-4 py-1.5 rounded">
+            <Sparkles className="w-4 h-4 text-[#866d1a]" /> Book Your Mehndi Appointment
+          </span>
 
-  {/* Glow Effects */}
-  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-[#D4AF37]/10 rounded blur-3xl pointer-events-none"></div>
-  
-  <div className="max-w-4xl mx-auto text-center relative z-10 space-y-4">
-    <span className="inline-flex items-center gap-1.5 text-[#9c832e] text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase bg-[#315C3A]/10 border border-[#D4AF37]/30 px-4 py-1.5 rounded">
-      <Sparkles className="w-4 h-4 text-[#866d1a]" /> Book Your Mehndi Appointment
-    </span>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold text-[#315C3A] leading-tight sm:leading-tight">
+            Your Special Day Deserves <br className="hidden sm:inline" />
+            <span className="text-[#A07E2F] italic font-normal">Beautiful Mehndi</span>
+          </h1>
 
-    <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold text-[#315C3A] leading-tight sm:leading-tight">
-      Your Special Day Deserves <br className="hidden sm:inline" />
-      <span className="text-[#A07E2F] italic font-normal">Beautiful Mehndi</span>
-    </h1>
+          <p className="text-sm sm:text-lg text-[#315C3A]/85 max-w-2xl mx-auto leading-relaxed pt-2">
+            Your wedding and celebrations are made of moments you'll remember forever — let your Mehndi  beautiful parts of them. ✨
+          </p>
 
-    <p className="text-sm sm:text-lg text-[#315C3A]/85 max-w-2xl mx-auto leading-relaxed pt-2">
-      Your wedding and celebrations are made of moments you'll remember forever — let your Mehndi  beautiful parts of them. ✨
-    </p>
-
-    <p className="text-xs sm:text-sm text-[#8C6D23] max-w-xl mx-auto font-medium leading-relaxed">
-      Whether you're looking for elegant bridal Mehndi, traditional patterns, modern Arabic designs, or Mehndi yours.
-    </p>
-  </div>
-</section>
+          <p className="text-xs sm:text-sm text-[#8C6D23] max-w-xl mx-auto font-medium leading-relaxed">
+            Whether you're looking for elegant bridal Mehndi, traditional patterns, modern Arabic designs, or Mehndi yours.
+          </p>
+        </div>
+      </section>
 
       {/* 2. SERVICES HIGHLIGHT SECTION */}
-      <section className="py-14 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-10">
+      <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className="text-center max-w-2xl mx-auto mb-8">
           <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#315C3A]">
             Make Your Celebration Extra Special
           </h2>
@@ -104,10 +100,9 @@ const BookMehndiAppointment = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Bridal Mehndi */}
-          <div className="bg-white p-6 sm:p-8 rounded border border-[#D4AF37]/30 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group">
-            <div className="w-14 h-14 bg-[#F5F0E6] rounded flex items-center justify-center mb-5 group-hover:bg-[#315C3A] transition-colors duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="bg-white p-5 sm:p-6 rounded border border-[#D4AF37]/30 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group">
+            <div className="w-14 h-14 bg-[#F5F0E6] rounded flex items-center justify-center mb-4 group-hover:bg-[#315C3A] transition-colors duration-300">
               <Crown className="w-7 h-7 text-[#A07E2F] group-hover:text-[#D4AF37] transition-colors duration-300" />
             </div>
             <h3 className="text-xl font-serif font-bold text-[#315C3A] mb-2">💍 Bridal Mehndi</h3>
@@ -116,9 +111,8 @@ const BookMehndiAppointment = () => {
             </p>
           </div>
 
-          {/* Engagement & Special Events */}
-          <div className="bg-white p-6 sm:p-8 rounded border border-[#D4AF37]/30 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group">
-            <div className="w-14 h-14 bg-[#F5F0E6] rounded flex items-center justify-center mb-5 group-hover:bg-[#315C3A] transition-colors duration-300">
+          <div className="bg-white p-5 sm:p-6 rounded border border-[#D4AF37]/30 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group">
+            <div className="w-14 h-14 bg-[#F5F0E6] rounded flex items-center justify-center mb-4 group-hover:bg-[#315C3A] transition-colors duration-300">
               <Heart className="w-7 h-7 text-[#A07E2F] group-hover:text-[#D4AF37] transition-colors duration-300" />
             </div>
             <h3 className="text-xl font-serif font-bold text-[#315C3A] mb-2">🌿 Engagement & Events</h3>
@@ -127,9 +121,8 @@ const BookMehndiAppointment = () => {
             </p>
           </div>
 
-          {/* Guest Mehndi */}
-          <div className="bg-white p-6 sm:p-8 rounded border border-[#D4AF37]/30 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group">
-            <div className="w-14 h-14 bg-[#F5F0E6] rounded flex items-center justify-center mb-5 group-hover:bg-[#315C3A] transition-colors duration-300">
+          <div className="bg-white p-5 sm:p-6 rounded border border-[#D4AF37]/30 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group">
+            <div className="w-14 h-14 bg-[#F5F0E6] rounded flex items-center justify-center mb-4 group-hover:bg-[#315C3A] transition-colors duration-300">
               <Users className="w-7 h-7 text-[#A07E2F] group-hover:text-[#D4AF37] transition-colors duration-300" />
             </div>
             <h3 className="text-xl font-serif font-bold text-[#315C3A] mb-2">✨ Guest Mehndi</h3>
@@ -141,13 +134,11 @@ const BookMehndiAppointment = () => {
       </section>
 
       {/* 3. APPOINTMENT FORM SECTION */}
-      <section id="booking-form-section" className="py-14 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <div className="bg-white rounded border border-[#D4AF37]/40 shadow-xl p-6 sm:p-10 relative overflow-hidden">
-          
-          {/* Top Decorative Border accent */}
+      <section id="booking-form-section" className="py-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div className="bg-white rounded border border-[#D4AF37]/40 shadow-xl p-5 sm:p-8 relative overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#315C3A] via-[#A07E2F] to-[#315C3A]"></div>
 
-          <div className="text-center max-w-2xl mx-auto mb-8">
+          <div className="text-center max-w-2xl mx-auto mb-6">
             <span className="text-[#A07E2F] text-xs uppercase tracking-widest font-bold">Tell Us About Your Event</span>
             <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#315C3A] mt-1">
               Plan Your Mehndi Experience
@@ -157,15 +148,14 @@ const BookMehndiAppointment = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-5">
             
-            {/* Personal Details */}
-            <div className="space-y-4">
+            <div className="space-y-3">
               <h3 className="text-base font-serif font-bold text-[#A07E2F] border-b border-[#D4AF37]/20 pb-2 flex items-center gap-2">
                 <Users className="w-4 h-4" /> Personal Details
               </h3>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#315C3A] mb-1.5">
                     Full Name *
@@ -212,13 +202,12 @@ const BookMehndiAppointment = () => {
               </div>
             </div>
 
-            {/* Event Details */}
-            <div className="space-y-4 pt-2">
+            <div className="space-y-3 pt-2">
               <h3 className="text-base font-serif font-bold text-[#A07E2F] border-b border-[#D4AF37]/20 pb-2 flex items-center gap-2">
                 <Calendar className="w-4 h-4" /> Event Details
               </h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#315C3A] mb-1.5">
                     Event Type *
@@ -254,7 +243,7 @@ const BookMehndiAppointment = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#315C3A] mb-1.5">
                     Event Location *
@@ -286,8 +275,7 @@ const BookMehndiAppointment = () => {
               </div>
             </div>
 
-            {/* Mehndi Requirements */}
-            <div className="space-y-4 pt-2">
+            <div className="space-y-3 pt-2">
               <h3 className="text-base font-serif font-bold text-[#A07E2F] border-b border-[#D4AF37]/20 pb-2 flex items-center gap-2">
                 <Sparkles className="w-4 h-4" /> Mehndi Requirements
               </h3>
@@ -318,7 +306,7 @@ const BookMehndiAppointment = () => {
                 </label>
                 <textarea
                   name="additionalRequirements"
-                  rows="4"
+                  rows="3"
                   value={formData.additionalRequirements}
                   onChange={handleChange}
                   placeholder="Tell us about your preferred design, function timings, special requests, or anything else you would like us to know."
@@ -329,7 +317,7 @@ const BookMehndiAppointment = () => {
 
             <button
               type="submit"
-              className="w-full py-4 bg-[#315C3A] hover:bg-[#25472d] text-white font-semibold rounded text-sm sm:text-base transition-all duration-300 shadow-md flex items-center justify-center gap-2 transform hover:-translate-y-0.5"
+              className="w-full py-3.5 bg-[#315C3A] hover:bg-[#25472d] text-white font-semibold rounded text-sm sm:text-base transition-all duration-300 shadow-md flex items-center justify-center gap-2 transform hover:-translate-y-0.5"
             >
               <Send className="w-4 h-4 text-[#D4AF37]" /> Submit Appointment Request
             </button>
@@ -339,11 +327,11 @@ const BookMehndiAppointment = () => {
       </section>
 
       {/* 4. YOUR DREAM MEHNDI STARTS HERE & WHY BOOK WITH US */}
-      <section className="py-14 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+      <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
           
           {/* Left Column: Ideas & Inspiration */}
-          <div className="bg-gradient-to-br from-[#315C3A] to-[#1F3D2B] text-white p-8 sm:p-10 rounded shadow-lg flex flex-col justify-between relative overflow-hidden">
+          <div className="bg-gradient-to-br from-[#315C3A] to-[#1F3D2B] text-white p-6 sm:p-8 rounded shadow-lg flex flex-col justify-between relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded blur-2xl pointer-events-none"></div>
             
             <div>
@@ -359,7 +347,7 @@ const BookMehndiAppointment = () => {
               </p>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-4 items-center">
+            <div className="mt-6 pt-5 border-t border-white/10 flex flex-wrap gap-4 items-center">
               <div className="flex items-center gap-2 text-xs text-white/90">
                 <CheckCircle2 className="w-4 h-4 text-[#D4AF37]" /> Organic Henna Paste
               </div>
@@ -370,15 +358,15 @@ const BookMehndiAppointment = () => {
           </div>
 
           {/* Right Column: Why Book With Us */}
-          <div className="bg-white p-8 sm:p-10 rounded border border-[#D4AF37]/30 shadow-sm flex flex-col justify-between">
+          <div className="bg-white p-6 sm:p-8 rounded border border-[#D4AF37]/30 shadow-sm flex flex-col justify-between">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#315C3A] mb-6">
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#315C3A] mb-5">
                 Why Book With Us?
               </h2>
 
-              <div className="space-y-5">
+              <div className="space-y-4">
                 <div className="flex gap-4 items-start">
-                  <div className="p-2.5 rounded bg-[#FAF7F2] text-[#A07E2F] shrink-0 border border-[#D4AF37]/30">
+                  <div className="p-2 rounded bg-[#FAF7F2] text-[#A07E2F] shrink-0 border border-[#D4AF37]/30">
                     <Sparkles className="w-5 h-5" />
                   </div>
                   <div>
@@ -388,7 +376,7 @@ const BookMehndiAppointment = () => {
                 </div>
 
                 <div className="flex gap-4 items-start">
-                  <div className="p-2.5 rounded bg-[#FAF7F2] text-[#A07E2F] shrink-0 border border-[#D4AF37]/30">
+                  <div className="p-2 rounded bg-[#FAF7F2] text-[#A07E2F] shrink-0 border border-[#D4AF37]/30">
                     <Crown className="w-5 h-5" />
                   </div>
                   <div>
@@ -398,7 +386,7 @@ const BookMehndiAppointment = () => {
                 </div>
 
                 <div className="flex gap-4 items-start">
-                  <div className="p-2.5 rounded bg-[#FAF7F2] text-[#A07E2F] shrink-0 border border-[#D4AF37]/30">
+                  <div className="p-2 rounded bg-[#FAF7F2] text-[#A07E2F] shrink-0 border border-[#D4AF37]/30">
                     <Heart className="w-5 h-5" />
                   </div>
                   <div>
@@ -408,7 +396,7 @@ const BookMehndiAppointment = () => {
                 </div>
 
                 <div className="flex gap-4 items-start">
-                  <div className="p-2.5 rounded bg-[#FAF7F2] text-[#A07E2F] shrink-0 border border-[#D4AF37]/30">
+                  <div className="p-2 rounded bg-[#FAF7F2] text-[#A07E2F] shrink-0 border border-[#D4AF37]/30">
                     <Calendar className="w-5 h-5" />
                   </div>
                   <div>
@@ -424,14 +412,14 @@ const BookMehndiAppointment = () => {
       </section>
 
       {/* 5. IMPORTANT BOOKING INFORMATION & NEED HELP */}
-      <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div className="bg-[#F5F0E6] p-6 sm:p-8 rounded border border-[#D4AF37]/30">
-          <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#315C3A] mb-6 text-center">
+      <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className="bg-[#F5F0E6] p-5 sm:p-6 rounded border border-[#D4AF37]/30">
+          <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#315C3A] mb-5 text-center">
             Important Booking Information
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-5 rounded border border-[#D4AF37]/20 shadow-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="bg-white p-4 rounded border border-[#D4AF37]/20 shadow-sm">
               <div className="flex items-center gap-2 text-[#A07E2F] font-serif font-bold text-base mb-2">
                 <Calendar className="w-4 h-4" /> Advance Booking
               </div>
@@ -440,7 +428,7 @@ const BookMehndiAppointment = () => {
               </p>
             </div>
 
-            <div className="bg-white p-5 rounded border border-[#D4AF37]/20 shadow-sm">
+            <div className="bg-white p-4 rounded border border-[#D4AF37]/20 shadow-sm">
               <div className="flex items-center gap-2 text-[#A07E2F] font-serif font-bold text-base mb-2">
                 <MapPin className="w-4 h-4" /> Location
               </div>
@@ -449,7 +437,7 @@ const BookMehndiAppointment = () => {
               </p>
             </div>
 
-            <div className="bg-white p-5 rounded border border-[#D4AF37]/20 shadow-sm">
+            <div className="bg-white p-4 rounded border border-[#D4AF37]/20 shadow-sm">
               <div className="flex items-center gap-2 text-[#A07E2F] font-serif font-bold text-base mb-2">
                 <CheckCircle2 className="w-4 h-4" /> Confirmation
               </div>
@@ -458,7 +446,7 @@ const BookMehndiAppointment = () => {
               </p>
             </div>
 
-            <div className="bg-white p-5 rounded border border-[#D4AF37]/20 shadow-sm">
+            <div className="bg-white p-4 rounded border border-[#D4AF37]/20 shadow-sm">
               <div className="flex items-center gap-2 text-[#A07E2F] font-serif font-bold text-base mb-2">
                 <Phone className="w-4 h-4" /> Need Help?
               </div>
@@ -471,7 +459,7 @@ const BookMehndiAppointment = () => {
       </section>
 
       {/* 6. FINAL FOOTER CTA SECTION */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-b from-[#FAF7F2] to-[#F5F0E6] border-t border-[#D4AF37]/20">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-b from-[#FAF7F2] to-[#F5F0E6] border-t border-[#D4AF37]/20">
         <div className="max-w-3xl mx-auto space-y-5">
           <span className="text-[#A07E2F] text-xs uppercase tracking-widest font-bold">🌸 Special Day Awaits</span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#315C3A]">

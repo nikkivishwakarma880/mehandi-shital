@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
 import shitalLogo from '../assets/shital-logo.png'
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [language, setLanguage] = useState('EN');
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -14,6 +16,10 @@ const Navbar = () => {
     { name: 'Gallery', path: '/gallery' },
     { name: 'Contact', path: '/contact' },
   ];
+
+  const toggleLanguage = () => {
+    setLanguage(prev => (prev === 'EN' ? 'HI' : 'EN'));
+  };
 
   return (
     /* Soft/Light Gradient Left-to-Right: Clean and Subtle Theme */
@@ -65,6 +71,14 @@ const Navbar = () => {
           >
             Book Appointment
           </Link>
+
+          {/* Language Toggle Button */}
+          <button
+            onClick={toggleLanguage}
+            className="bg-[#B38F24] text-[#FFF8E7] text-[11px] px-3 py-2 rounded font-semibold hover:bg-[#9c7a1e] transition-all duration-300 shadow-sm"
+          >
+            {language === 'EN' ? 'हिंदी' : 'English'}
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -105,6 +119,17 @@ const Navbar = () => {
               >
                 Book Appointment
               </Link>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  toggleLanguage();
+                  setIsOpen(false);
+                }}
+                className="block w-full text-center bg-[#B38F24] text-[#FFF8E7] text-xs px-5 py-2.5 rounded font-semibold hover:bg-[#9c7a1e] transition-all duration-300 shadow-sm"
+              >
+                {language === 'EN' ? 'हिंदी' : 'English'}
+              </button>
             </li>
           </ul>
         </div>

@@ -12,6 +12,8 @@ import Footer from './components/Footer'
 import Loader from './components/Loader'
 import ScrollToTop from './components/ScrollToTop'
 
+
+import { LanguageProvider } from './context/LanguageContext'
 const App = () => {
 
   const [loading, setLoading] = useState(true)
@@ -30,6 +32,9 @@ const App = () => {
   }
 
   return (
+    <LanguageProvider>
+
+
     <div>
 
       <Navbar />
@@ -47,6 +52,7 @@ const App = () => {
       <Footer />
 
     </div>
+    </LanguageProvider>
   )
 }
 

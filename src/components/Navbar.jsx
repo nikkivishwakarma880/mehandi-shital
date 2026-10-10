@@ -158,7 +158,7 @@ const Navbar = () => {
 
             </li>
 
-            {/* Mobile Language Button */} 
+            {/* Mobile Language Button 
            <li>
 
               <button
@@ -171,7 +171,7 @@ const Navbar = () => {
                 {t.navbar.languageButton}
               </button>
 
-            </li> 
+            </li>  */}
 
           </ul>
 

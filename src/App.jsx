@@ -32,7 +32,7 @@ const App = () => {
   }
 
   return (
-    <LanguageProvider>
+    <LanguageProvider> 
 
 
     <div>

@@ -95,13 +95,14 @@ const Navbar = () => {
             {t.navbar.bookAppointment}
           </Link>
 
-          {/* Language Toggle Button */}
+          {/* Language Toggle Button 
           <button
             onClick={toggleLanguage}
             className="bg-[#B38F24] text-[#FFF8E7] text-[11px] px-3 py-2 rounded font-semibold hover:bg-[#9c7a1e] transition-all duration-300 shadow-sm"
           >
             {t.navbar.languageButton}
           </button>
+          */}
 
         </div>
 
@@ -157,8 +158,8 @@ const Navbar = () => {
 
             </li>
 
-            {/* Mobile Language Button */}
-            <li>
+            {/* Mobile Language Button */} 
+           <li>
 
               <button
                 onClick={() => {
@@ -170,7 +171,7 @@ const Navbar = () => {
                 {t.navbar.languageButton}
               </button>
 
-            </li>
+            </li> 
 
           </ul>
 
